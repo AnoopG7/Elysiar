@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="../css/preload-dark.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Elysiar - Modern Ride-Hailing Service</title>
+    <meta
+      name="description"
+      content="Book rides, track drivers in real-time, and enjoy a seamless transportation experience with Elysiar."
+    />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../images/favicon.png" />
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="../css/base.css" />
+    <link rel="stylesheet" href="../css/header.css" />
+    <link rel="stylesheet" href="../css/footer.css" />
+    <link rel="stylesheet" href="../css/landing.css" />
+
+    <link rel="stylesheet" href="../css/custom.css" />
+
+    <!-- Font Awesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+
+    <!-- JavaScript Files -->
+    <script src="../js/path-helper.js"></script>
+    <script src="../js/navigation-validator.js"></script>
+    <script src="../js/footer.js"></script>
+    <script src="../js/navbar.js"></script>
+    <script src="../js/update_css.js"></script>
+    <script src="../js/update_css.js"></script>
+    <link rel="stylesheet" href="../css/dark-theme.css" />
+  </head>
+  <body>
+    <header class="header" id="header"></header>
+
+    <!-- Main Content -->
+    <main class="main-content" id="main-content">
+      <!-- Hero Section -->
+      <section class="hero-section">
+        <div class="container">
+          <div class="hero-content">
+            <h1 class="hero-title">Your Ride, Your Way</h1>
+            <p class="hero-subtitle">
+              Book rides, track in real-time, and enjoy a seamless
+              transportation experience.
+            </p>
+            <div class="hero-buttons">
+              <a href="./booking.html" class="btn btn-primary btn-lg"
+                >Book a Ride</a
+              >
+              <a href="#how-it-works" class="btn btn-outline btn-lg"
+                >Learn More</a
+              >
+            </div>
+          </div>
+          <div class="hero-image">
+            <img src="../images/hero-car.svg" alt="Elysiar Car Illustration" />
+            <div class="hero-blob"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- How It Works Section -->
+      <section class="how-it-works-section" id="how-it-works">
+        <div class="container">
+          <div class="section-header">
+            <h2 class="section-title">How It Works</h2>
+            <p class="section-subtitle">
+              Get where you need to go with Elysiar in just a few simple steps
+            </p>
+          </div>
+
+          <div class="steps-container">
+            <div class="step">
+              <div class="step-icon">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <h3 class="step-title">Set Your Location</h3>
+              <p class="step-description">
+                Enter your pickup location and destination to get started.
+              </p>
+            </div>
+
+            <div class="step">
+              <div class="step-icon">
+                <i class="fas fa-car"></i>
+              </div>
+              <h3 class="step-title">Choose Your Ride</h3>
+              <p class="step-description">
+                Select from a variety of vehicle options to suit your needs.
+              </p>
+            </div>
+
+            <div class="step">
+              <div class="step-icon">
+                <i class="fas fa-check-circle"></i>
+              </div>
+              <h3 class="step-title">Confirm & Go</h3>
+              <p class="step-description">
+                Confirm your ride and track your driver in real-time.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Vehicle Types Section -->
+      <section class="vehicles-section">
+        <div class="container">
+          <div class="section-header">
+            <h2 class="section-title">Choose Your Ride</h2>
+            <p class="section-subtitle">
+              Select the perfect vehicle for your journey
+            </p>
+          </div>
+
+          <div class="vehicle-grid">
+            <div class="vehicle-card">
+              <div class="vehicle-image">
+                <img
+                  src="../images/vehicle-economy.svg"
+                  alt="Economy Vehicle"
+                />
+              </div>
+              <div class="vehicle-info">
+                <h3 class="vehicle-title">Economy</h3>
+                <p class="vehicle-description">
+                  Affordable rides for everyday travel. Up to 4 passengers.
+                </p>
+                <div class="vehicle-features">
+                  <span class="vehicle-feature">
+                    <i class="fas fa-user"></i> 4
+                  </span>
+                  <span class="vehicle-feature">
+                    <i class="fas fa-suitcase"></i> 2
+                  </span>
+                  <span class="vehicle-feature">
+                    <i class="fas fa-dollar-sign"></i> Budget
+                  </span>
+                </div>
+                <a href="./booking.html" class="btn btn-outline btn-sm"
+                  >Book Now</a
+                >
+              </div>
+            </div>
+
+            <div class="vehicle-card">
+              <div class="vehicle-image">
+                <img
+                  src="../images/vehicle-premium.svg"
+                  alt="Premium Vehicle"
+                />
+              </div>
+              <div class="vehicle-info">
+                <h3 class="vehicle-title">Premium</h3>
+                <p class="vehicle-description">
+                  High-end vehicles with extra comfort. Up to 4 passengers.
+                </p>
+                <div class="vehicle-features">
+                  <span class="vehicle-feature">
+                    <i class="fas fa-user"></i> 4
+                  </span>
+                  <span class="vehicle-feature">
+                    <i class="fas fa-suitcase"></i> 3
+                  </span>
+                  <span class="vehicle-feature">
+                    <i class="fas fa-star"></i> Luxury
+                  </span>
+                </div>
+                <a href="./booking.html" class="btn btn-outline btn-sm"
+                  >Book Now</a
+                >
+              </div>
+            </div>
+
+            <div class="vehicle-card">
+              <div class="vehicle-image">
+                <img src="../images/vehicle-xl.svg" alt="XL Vehicle" />
+              </div>
+              <div class="vehicle-info">
+                <h3 class="vehicle-title">XL</h3>
+                <p class="vehicle-description">
+                  Spacious SUVs for larger groups. Up to 6 passengers.
+                </p>
+                <div class="vehicle-features">
+                  <span class="vehicle-feature">
+                    <i class="fas fa-user"></i> 6
+                  </span>
+                  <span class="vehicle-feature">
+                    <i class="fas fa-suitcase"></i> 4
+                  </span>
+                  <span class="vehicle-feature">
+                    <i class="fas fa-users"></i> Groups
+                  </span>
+                </div>
+                <a href="./booking.html" class="btn btn-outline btn-sm"
+                  >Book Now</a
+                >
+              </div>
+            </div>
+
+            <div class="vehicle-card">
+              <div class="vehicle-image">
+                <img
+                  src="../images/vehicle-electric.svg"
+                  alt="Electric Vehicle"
+                />
+              </div>
+              <div class="vehicle-info">
+                <h3 class="vehicle-title">Green</h3>
+                <p class="vehicle-description">
+                  Eco-friendly electric vehicles. Up to 4 passengers.
+                </p>
+                <div class="vehicle-features">
+                  <span class="vehicle-feature">
+                    <i class="fas fa-user"></i> 4
+                  </span>
+                  <span class="vehicle-feature">
+                    <i class="fas fa-suitcase"></i> 2
+                  </span>
+                  <span class="vehicle-feature">
+                    <i class="fas fa-leaf"></i> Eco
+                  </span>
+                </div>
+                <a href="./booking.html" class="btn btn-outline btn-sm"
+                  >Book Now</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Features Section -->
+      <section class="features-section">
+        <div class="container">
+          <div class="section-header">
+            <h2 class="section-title">Why Choose Elysiar</h2>
+            <p class="section-subtitle">
+              Experience the next generation of ride-hailing services
+            </p>
+          </div>
+
+          <div class="features-grid">
+            <div class="feature-card">
+              <div class="feature-icon">
+                <i class="fas fa-bolt"></i>
+              </div>
+              <h3 class="feature-title">Fast Pickup</h3>
+              <p class="feature-description">
+                Get picked up within minutes of booking your ride.
+              </p>
+            </div>
+
+            <div class="feature-card">
+              <div class="feature-icon">
+                <i class="fas fa-shield-alt"></i>
+              </div>
+              <h3 class="feature-title">Safety First</h3>
+              <p class="feature-description">
+                All drivers are verified and vehicles regularly inspected.
+              </p>
+            </div>
+
+            <div class="feature-card">
+              <div class="feature-icon">
+                <i class="fas fa-dollar-sign"></i>
+              </div>
+              <h3 class="feature-title">Affordable Rates</h3>
+              <p class="feature-description">
+                Competitive pricing with no hidden fees or surge charges.
+              </p>
+            </div>
+
+            <div class="feature-card">
+              <div class="feature-icon">
+                <i class="fas fa-map"></i>
+              </div>
+              <h3 class="feature-title">Live Tracking</h3>
+              <p class="feature-description">
+                Track your ride in real-time and share your trip with loved
+                ones.
+              </p>
+            </div>
+
+            <div class="feature-card">
+              <div class="feature-icon">
+                <i class="fas fa-star"></i>
+              </div>
+              <h3 class="feature-title">Top-Rated Drivers</h3>
+              <p class="feature-description">
+                Our drivers maintain high ratings for quality service.
+              </p>
+            </div>
+
+            <div class="feature-card">
+              <div class="feature-icon">
+                <i class="fas fa-headset"></i>
+              </div>
+              <h3 class="feature-title">24/7 Support</h3>
+              <p class="feature-description">
+                Customer support available around the clock for assistance.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA Section -->
+      <section class="cta-section">
+        <div class="container">
+          <div class="cta-content">
+            <h2 class="cta-title">Ready to Experience Elysiar?</h2>
+            <p class="cta-description">
+              Join thousands of satisfied riders who trust Elysiar for their
+              daily transportation needs.
+            </p>
+            <div class="cta-buttons">
+              <a href="booking.html" class="btn btn-primary btn-lg"
+                >Book Your First Ride</a
+              >
+              <a href="./signup.html" class="btn btn-outline btn-lg"
+                >Create an Account</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- Testimonials Section -->
+      <section
+        class="testimonials-section"
+        id="testimonials"
+        aria-labelledby="testimonials-heading"
+      >
+        <div class="container">
+          <div class="section-header">
+            <h2 class="section-title" id="testimonials-heading">
+              What Our Riders Say
+            </h2>
+            <p class="section-subtitle">
+              Hear from people who use Elysiar every day
+            </p>
+          </div>
+
+          <div
+            class="testimonials-carousel"
+            role="region"
+            aria-label="Customer testimonials"
+          >
+            <button class="carousel-arrow prev" aria-label="Previous testimonial">
+              <i class="fas fa-chevron-left"></i>
+            </button>
+            
+            <div class="testimonials-track">
+              <!-- Testimonial 1 -->
+              <div class="testimonial-card">
+                <div class="testimonial-rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+                <div class="testimonial-text">
+                  <p>
+                    "Elysiar has transformed my daily commute! The app is incredibly intuitive, 
+                    and the real-time tracking feature gives me peace of mind. The drivers are 
+                    consistently professional and courteous. It's refreshing to have such a 
+                    reliable service."
+                  </p>
+                </div>
+                <div class="testimonial-author">
+                  <div class="author-image">
+                    <img src="../images/testimonial-1.jpg" alt="Sarah Johnson" />
+                  </div>
+                  <div class="author-info">
+                    <h4 class="author-name">Sarah Johnson</h4>
+                    <p class="author-title">Marketing Professional</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Testimonial 2 -->
+              <div class="testimonial-card">
+                <div class="testimonial-rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+                <div class="testimonial-text">
+                  <p>
+                    "As a frequent business traveler, I rely heavily on ride-hailing services. 
+                    Elysiar stands out with its premium fleet and exceptional service. The fixed 
+                    pricing and detailed receipts make expense reporting a breeze. Absolutely 
+                    worth every penny!"
+                  </p>
+                </div>
+                <div class="testimonial-author">
+                  <div class="author-image">
+                    <img src="../images/testimonial-2.jpg" alt="Michael Rodriguez" />
+                  </div>
+                  <div class="author-info">
+                    <h4 class="author-name">Michael Rodriguez</h4>
+                    <p class="author-title">Business Executive</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Testimonial 3 -->
+              <div class="testimonial-card">
+                <div class="testimonial-rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+                <div class="testimonial-text">
+                  <p>
+                    "The eco-friendly options at Elysiar align perfectly with my values. 
+                    I love that I can choose electric vehicles and contribute to reducing 
+                    my carbon footprint. The drivers are knowledgeable about sustainable 
+                    practices too!"
+                  </p>
+                </div>
+                <div class="testimonial-author">
+                  <div class="author-image">
+                    <img src="../images/testimonial-3.jpg" alt="Emily Chen" />
+                  </div>
+                  <div class="author-info">
+                    <h4 class="author-name">Emily Chen</h4>
+                    <p class="author-title">Environmental Consultant</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Testimonial 4 -->
+              <div class="testimonial-card">
+                <div class="testimonial-rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+                <div class="testimonial-text">
+                  <p>
+                    "Safety was my top concern when choosing a ride-hailing service. 
+                    Elysiar's comprehensive safety features, including live tracking 
+                    and emergency assistance, give me complete confidence. Their 24/7 
+                    support is incredibly responsive!"
+                  </p>
+                </div>
+                <div class="testimonial-author">
+                  <div class="author-image">
+                    <img src="../images/testimonial-1.jpg" alt="Alexandra Torres" />
+                  </div>
+                  <div class="author-info">
+                    <h4 class="author-name">Alexandra Torres</h4>
+                    <p class="author-title">Healthcare Professional</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <button class="carousel-arrow next" aria-label="Next testimonial">
+              <i class="fas fa-chevron-right"></i>
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+      <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- JavaScript Files -->
+    <script src="../js/navigation.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/settings.js"></script>
+    <script src="../js/link-test.js"></script>
+    <script src="../js/dark-theme.js"></script>
+  </body>
+</html>

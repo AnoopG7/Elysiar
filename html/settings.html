@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="../css/preload-dark.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings - Elysiar</title>
+    <meta name="description" content="Configure your preferences and settings for Elysiar ride-hailing service.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../images/favicon.png">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    
+    <link rel="stylesheet" href="../css/settings.css">
+    <link rel="stylesheet" href="../css/custom.css">
+    <link rel="stylesheet" href="../css/extracted-common.css">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- JavaScript Files -->
+    <script src="../js/footer.js"></script>
+    <script src="../js/navbar.js"></script>
+    <script src="../js/update_css.js"></script>
+<link rel="stylesheet" href="../css/dark-theme.css">
+</head>
+<body>
+    <header class="header" id="header"></header>
+    
+    <!-- Settings Page Content -->
+    <main class="main-content settings-page">
+        <div class="container">
+            <div class="page-header">
+                <h1>Settings</h1>
+                <p class="page-description">Customize your Elysiar experience</p>
+            </div>
+            
+            <div class="settings-container">
+                <!-- Settings Sidebar -->
+                <aside class="settings-sidebar">
+                    <h2 class="settings-nav-title">Settings</h2>
+                    <ul class="settings-nav-list">
+                        <li class="settings-nav-item">
+                            <a href="#general" class="settings-nav-link active">
+                                <i class="fas fa-sliders-h"></i>
+                                General
+                            </a>
+                        </li>
+                        <li class="settings-nav-item">
+                            <a href="#notifications" class="settings-nav-link">
+                                <i class="fas fa-bell"></i>
+                                Notifications
+                            </a>
+                        </li>
+                        <li class="settings-nav-item">
+                            <a href="#privacy" class="settings-nav-link">
+                                <i class="fas fa-shield-alt"></i>
+                                Privacy
+                            </a>
+                        </li>
+                        <li class="settings-nav-item">
+                            <a href="#security" class="settings-nav-link">
+                                <i class="fas fa-lock"></i>
+                                Security
+                            </a>
+                        </li>
+                        <li class="settings-nav-item">
+                            <a href="#preferences" class="settings-nav-link">
+                                <i class="fas fa-heart"></i>
+                                Ride Preferences
+                            </a>
+                        </li>
+                        <li class="settings-nav-item">
+                            <a href="#language" class="settings-nav-link">
+                                <i class="fas fa-language"></i>
+                                Language
+                            </a>
+                        </li>
+                        <li class="settings-nav-item">
+                            <a href="#accessibility" class="settings-nav-link">
+                                <i class="fas fa-universal-access"></i>
+                                Accessibility
+                            </a>
+                        </li>
+                    </ul>
+                </aside>
+                
+                <!-- Settings Content -->
+                <div class="settings-content">
+                    <!-- General Settings -->
+                    <section id="general" class="settings-section">
+                        <div class="settings-section-header">
+                            <h2 class="settings-section-title">General Settings</h2>
+                            <p class="settings-section-description">Configure your basic app preferences</p>
+                        </div>
+                        
+                        <div class="toggle-switch-container">
+                            <div class="toggle-info">
+                                <h3 class="toggle-label">Ride History Sync</h3>
+                                <p class="toggle-description">Sync ride history across devices</p>
+                            </div>
+                            <label class="toggle-switch">
+                                <input type="checkbox" id="ride-history-sync" checked>
+                                <span class="toggle-slider"></span>
+                            </label>
+                        </div>
+                        
+                        <div class="toggle-switch-container">
+                            <div class="toggle-info">
+                                <h3 class="toggle-label">Map Animation</h3>
+                                <p class="toggle-description">Enable animations on maps</p>
+                            </div>
+                            <label class="toggle-switch">
+                                <input type="checkbox" id="map-animation" checked>
+                                <span class="toggle-slider"></span>
+                            </label>
+                        </div>
+                        
+                        <div class="toggle-switch-container">
+                            <div class="toggle-info">
+                                <h3 class="toggle-label">Automatic Updates</h3>
+                                <p class="toggle-description">Keep app updated automatically</p>
+                            </div>
+                            <label class="toggle-switch">
+                                <input type="checkbox" id="automatic-updates" checked>
+                                <span class="toggle-slider"></span>
+                            </label>
+                        </div>
+                    </section>
+                    
+                    <!-- Notifications Settings -->
+                    <section id="notifications" class="settings-section">
+                        <div class="settings-section-header">
+                            <h2 class="settings-section-title">Notifications</h2>
+                            <p class="settings-section-description">Manage your notification preferences</p>
+                        </div>
+                        
+                        <div class="toggle-switch-container">
+                            <div class="toggle-info">
+                                <h3 class="toggle-label">Push Notifications</h3>
+                                <p class="toggle-description">Receive notifications about ride updates</p>
+                            </div>
+                            <label class="toggle-switch">
+                                <input type="checkbox" id="push-notifications" checked>
+                                <span class="toggle-slider"></span>
+                            </label>
+                        </div>
+                        
+                        <div class="toggle-switch-container">
+                            <div class="toggle-info">
+                                <h3 class="toggle-label">Email Notifications</h3>
+                                <p class="toggle-description">Receive ride receipt and trip updates via email</p>
+                            </div>
+                            <label class="toggle-switch">
+                                <input type="checkbox" id="email-notifications" checked>
+                                <span class="toggle-slider"></span>
+                            </label>
+                        </div>
+                        
+                        <div class="toggle-switch-container">
+                            <div class="toggle-info">
+                                <h3 class="toggle-label">SMS Notifications</h3>
+                                <p class="toggle-description">Receive SMS when your ride arrives</p>
+                            </div>
+                            <label class="toggle-switch">
+                                <input type="checkbox" id="sms-notifications">
+                                <span class="toggle-slider"></span>
+                            </label>
+                        </div>
+                        
+                        <div class="toggle-switch-container">
+                            <div class="toggle-info">
+                                <h3 class="toggle-label">Marketing Communications</h3>
+                                <p class="toggle-description">Receive offers, discounts and updates</p>
+                            </div>
+                            <label class="toggle-switch">
+                                <input type="checkbox" id="marketing-communications">
+                                <span class="toggle-slider"></span>
+                            </label>
+                        </div>
+                    </section>
+                    
+                    <!-- Privacy Settings -->
+                    <section id="privacy" class="settings-section">
+                        <div class="settings-section-header">
+                            <h2 class="settings-section-title">Privacy</h2>
+                            <p class="settings-section-description">Control your privacy settings</p>
+                        </div>
+                        
+                        <div class="toggle-switch-container">
+                            <div class="toggle-info">
+                                <h3 class="toggle-label">Location Sharing</h3>
+                                <p class="toggle-description">Allow app to access your location</p>
+                            </div>
+                            <label class="toggle-switch">
+                                <input type="checkbox" id="location-sharing" checked>
+                                <span class="toggle-slider"></span>
+                            </label>
+                        </div>
+                        
+                        <div class="toggle-switch-container">
+                            <div class="toggle-info">
+                                <h3 class="toggle-label">Data Collection</h3>
+                                <p class="toggle-description">Allow anonymous data collection to improve service</p>
+                            </div>
+                            <label class="toggle-switch">
+                                <input type="checkbox" id="data-collection" checked>
+                                <span class="toggle-slider"></span>
+                            </label>
+                        </div>
+                        
+                        <div class="toggle-switch-container">
+                            <div class="toggle-info">
+                                <h3 class="toggle-label">Share Ride Status</h3>
+                                <p class="toggle-description">Allow friends and family to see your ride status</p>
+                            </div>
+                            <label class="toggle-switch">
+                                <input type="checkbox" id="share-ride-status">
+                                <span class="toggle-slider"></span>
+                            </label>
+                        </div>
+                        
+                        <div class="form-group">
+                            <button class="btn btn-secondary" id="download-data-btn">
+                                <i class="fas fa-download"></i>
+                                Download My Data
+                            </button>
+                        </div>
+                    </section>
+                    
+                    <!-- Security Settings -->
+                    <section id="security" class="settings-section">
+                        <div class="settings-section-header">
+                            <h2 class="settings-section-title">Security</h2>
+                            <p class="settings-section-description">Manage your account security settings</p>
+                        </div>
+                        
+                        <div class="toggle-switch-container">
+                            <div class="toggle-info">
+                                <h3 class="toggle-label">Two-Factor Authentication</h3>
+                                <p class="toggle-description">Add an extra layer of security to your account</p>
+                            </div>
+                            <label class="toggle-switch">
+                                <input type="checkbox" id="two-factor-auth">
+                                <span class="toggle-slider"></span>
+                            </label>
+                        </div>
+                        
+                        <div class="toggle-switch-container">
+                            <div class="toggle-info">
+                                <h3 class="toggle-label">Biometric Login</h3>
+                                <p class="toggle-description">Use fingerprint or face recognition to login</p>
+                            </div>
+                            <label class="toggle-switch">
+                                <input type="checkbox" id="biometric-login">
+                                <span class="toggle-slider"></span>
+                            </label>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="change-password">Password</label>
+                            <div class="input-group">
+                                <input type="password" class="input-field" id="current-password" placeholder="Current password" disabled value="••••••••">
+                                <button class="btn btn-secondary" id="change-password-btn">
+                                    Change Password
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <button class="btn btn-danger" id="logout-all-devices-btn">
+                                <i class="fas fa-sign-out-alt"></i>
+                                Log Out of All Devices
+                            </button>
+                        </div>
+                    </section>
+                    
+                    <!-- Ride Preferences Settings -->
+                    <section id="preferences" class="settings-section">
+                        <div class="settings-section-header">
+                            <h2 class="settings-section-title">Ride Preferences</h2>
+                            <p class="settings-section-description">Customize your ride experience</p>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="default-car-type">Default Car Type</label>
+                            <select class="input-field" id="default-car-type">
+                                <option value="economy">Economy</option>
+                                <option value="comfort">Comfort</option>
+                                <option value="premium">Premium</option>
+                                <option value="luxury">Luxury</option>
+                            </select>
+                        </div>
+                        
+                        <div class="toggle-switch-container">
+                            <div class="toggle-info">
+                                <h3 class="toggle-label">Auto-match with Preferred Drivers</h3>
+                                <p class="toggle-description">Prioritize matching with your top-rated drivers</p>
+                            </div>
+                            <label class="toggle-switch">
+                                <input type="checkbox" id="preferred-drivers" checked>
+                                <span class="toggle-slider"></span>
+                            </label>
+                        </div>
+                        
+                        <div class="toggle-switch-container">
+                            <div class="toggle-info">
+                                <h3 class="toggle-label">Quick Book from Home</h3>
+                                <p class="toggle-description">One tap booking from your home location</p>
+                            </div>
+                            <label class="toggle-switch">
+                                <input type="checkbox" id="quick-book" checked>
+                                <span class="toggle-slider"></span>
+                            </label>
+                        </div>
+                        
+                        <div class="toggle-switch-container">
+                            <div class="toggle-info">
+                                <h3 class="toggle-label">Saved Destinations</h3>
+                                <p class="toggle-description">Show saved destinations in booking screen</p>
+                            </div>
+                            <label class="toggle-switch">
+                                <input type="checkbox" id="saved-destinations" checked>
+                                <span class="toggle-slider"></span>
+                            </label>
+                        </div>
+                    </section>
+                    
+                    <!-- Language Settings -->
+                    <section id="language" class="settings-section">
+                        <div class="settings-section-header">
+                            <h2 class="settings-section-title">Language</h2>
+                            <p class="settings-section-description">Choose your preferred language</p>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="app-language">App Language</label>
+                            <select class="input-field" id="app-language">
+                                <option value="en">English</option>
+                                <option value="es">Español (Spanish)</option>
+                                <option value="fr">Français (French)</option>
+                                <option value="de">Deutsch (German)</option>
+                                <option value="zh">中文 (Chinese)</option>
+                                <option value="ja">日本語 (Japanese)</option>
+                                <option value="ar">العربية (Arabic)</option>
+                                <option value="hi">हिंदी (Hindi)</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="currency">Currency</label>
+                            <select class="input-field" id="currency">
+                                <option value="USD">USD ($)</option>
+                                <option value="EUR">EUR (€)</option>
+                                <option value="GBP">GBP (£)</option>
+                                <option value="JPY">JPY (¥)</option>
+                                <option value="AUD">AUD (A$)</option>
+                                <option value="CAD">CAD (C$)</option>
+                                <option value="INR">INR (₹)</option>
+                                <option value="CNY">CNY (¥)</option>
+                            </select>
+                        </div>
+                    </section>
+                    
+                    <!-- Accessibility Settings -->
+                    <section id="accessibility" class="settings-section">
+                        <div class="settings-section-header">
+                            <h2 class="settings-section-title">Accessibility</h2>
+                            <p class="settings-section-description">Configure accessibility options</p>
+                        </div>
+                        
+                        <div class="toggle-switch-container">
+                            <div class="toggle-info">
+                                <h3 class="toggle-label">Screen Reader Support</h3>
+                                <p class="toggle-description">Optimize interface for screen readers</p>
+                            </div>
+                            <label class="toggle-switch">
+                                <input type="checkbox" id="screen-reader">
+                                <span class="toggle-slider"></span>
+                            </label>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="text-size">Text Size</label>
+                            <select class="input-field" id="text-size">
+                                <option value="small">Small</option>
+                                <option value="medium" selected>Medium (Default)</option>
+                                <option value="large">Large</option>
+                                <option value="x-large">Extra Large</option>
+                            </select>
+                        </div>
+                        
+                        <div class="toggle-switch-container">
+                            <div class="toggle-info">
+                                <h3 class="toggle-label">Reduced Motion</h3>
+                                <p class="toggle-description">Minimize animations and motion effects</p>
+                            </div>
+                            <label class="toggle-switch">
+                                <input type="checkbox" id="reduced-motion">
+                                <span class="toggle-slider"></span>
+                            </label>
+                        </div>
+                        
+                        <div class="toggle-switch-container">
+                            <div class="toggle-info">
+                                <h3 class="toggle-label">High Contrast Mode</h3>
+                                <p class="toggle-description">Increase contrast for better visibility</p>
+                            </div>
+                            <label class="toggle-switch">
+                                <input type="checkbox" id="high-contrast">
+                                <span class="toggle-slider"></span>
+                            </label>
+                        </div>
+                        
+                        <div class="form-actions form-actions-with-margin">
+                            <button class="btn btn-danger" id="reset-settings-btn">
+                                <i class="fas fa-undo"></i>
+                                Reset All Settings
+                            </button>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    
+    <!-- JavaScript Files -->
+    <script src="../js/main.js"></script>
+    <script src="../js/settings.js"></script>
+<script src="../js/dark-theme.js"></script>
+</body>
+</html>

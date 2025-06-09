@@ -1,0 +1,58 @@
+/* Contact page specific styles */
+.contact-section {
+  padding: 6rem 1rem;
+  min-height: 100vh;
+}
+
+/* Quick Contact Grid */
+.quick-contact-grid {
+  max-width: 900px;
+  margin: 0 auto 4rem;
+}
+
+/* Contact-specific link styling */
+.contact-info-content a {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0;
+  transition: all 0.3s ease;
+}
+
+.contact-info-content a:hover {
+  color: var(--primary-purple);
+}
+
+/* Contact Form Section */
+.contact-form h3 {
+  color: var(--text-primary);
+  font-size: 1.75rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+/* Help Section Contact-specific */
+.more-help-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 0;
+}
+
+/* Social Links in Contact Page */
+.social-links {
+  justify-content: flex-end;
+  padding: 0 2rem;
+}
+
+/* Contact-specific responsive styles */
+@media (max-width: 991px) {
+  .help-options-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 767px) {
+  .help-options-grid {
+    grid-template-columns: 1fr;
+  }
+}

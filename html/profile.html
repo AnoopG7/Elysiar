@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="../css/preload-dark.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile - Elysiar</title>
+    <meta name="description" content="Manage your Elysiar profile, personal information, and preferences.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../images/favicon.png">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/profile.css">
+    
+    <link rel="stylesheet" href="../css/custom.css">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- JavaScript Files -->
+    <script src="../js/footer.js"></script>
+    <script src="../js/navbar.js"></script>
+    <script src="../js/update_css.js"></script>
+<link rel="stylesheet" href="../css/dark-theme.css">
+</head>
+<body>
+    <header class="header" id="header"></header>
+
+    <!-- Profile Page Content -->
+                    
+    
+    <!-- Profile Page Content -->
+    <main class="main-content profile-page">
+        <div class="container">
+            <div class="page-header">
+                <h1>My Profile</h1>
+                <p class="page-description">Manage your personal information and preferences</p>
+            </div>
+            
+            <!-- Profile Content -->
+            <div class="profile-section">
+                <div class="profile-card">
+                    <div class="profile-header">
+                        <div class="profile-avatar-container">
+                            <img src="https://static.vecteezy.com/system/resources/thumbnails/020/765/399/small_2x/default-profile-account-unknown-icon-black-silhouette-free-vector.jpg" alt="Profile" class="profile-avatar">
+                            <button class="avatar-edit-button">
+                                <i class="fas fa-camera"></i>
+                            </button>
+                        </div>
+                        <div class="profile-info">
+                            <h2 class="profile-name">John Doe</h2>
+                            <p class="profile-email">john.doe@example.com</p>
+                            <p class="profile-member-since">Member since June 2023</p>
+                            <div class="profile-rating">
+                                <span class="rating-stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </span>
+                                <span class="rating-value">4.5</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="profile-details">
+                        <div class="profile-stats">
+                            <div class="stat-item">
+                                <span class="stat-value">42</span>
+                                <span class="stat-label">Rides</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-value">12</span>
+                                <span class="stat-label">Favorites</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-value">3</span>
+                                <span class="stat-label">Saved Places</span>
+                            </div>
+                        </div>
+                        
+                        <div class="profile-actions">
+                            <button class="btn btn-outline">
+                                <i class="fas fa-edit"></i>
+                                Edit Profile
+                            </button>
+                            <button class="btn btn-secondary">
+                                <i class="fas fa-cog"></i>
+                                Settings
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Personal Information -->
+                <div class="section-card">
+                    <div class="section-header">
+                        <h3>Personal Information</h3>
+                        <button class="btn btn-text">
+                            <i class="fas fa-edit"></i>
+                            Edit
+                        </button>
+                    </div>
+                    <div class="info-list">
+                        <div class="info-item">
+                            <div class="info-label">Full Name</div>
+                            <div class="info-value">John Michael Doe</div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-label">Phone</div>
+                            <div class="info-value">+1 (555) 123-4567</div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-label">Email</div>
+                            <div class="info-value">john.doe@example.com</div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-label">Date of Birth</div>
+                            <div class="info-value">May 15, 1985</div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-label">Address</div>
+                            <div class="info-value">123 Main St, Anytown, ST 12345</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Payments Section -->
+                <div class="section-card">
+                    <div class="section-header">
+                        <h3>Payment Methods</h3>
+                        <button class="btn btn-text">
+                            <i class="fas fa-plus"></i>
+                            Add New
+                        </button>
+                    </div>
+                    <div class="payment-methods">
+                        <div class="payment-method">
+                            <div class="payment-method-icon">
+                                <i class="fab fa-cc-visa"></i>
+                            </div>
+                            <div class="payment-method-info">
+                                <div class="payment-method-name">Visa ending in 4567</div>
+                                <div class="payment-method-expiry">Expires 09/2025</div>
+                            </div>
+                            <div class="payment-method-actions">
+                                <button class="btn btn-icon">
+                                    <i class="fas fa-pen"></i>
+                                </button>
+                                <button class="btn btn-icon">
+                                    <i class="fas fa-trash-alt"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="payment-method">
+                            <div class="payment-method-icon">
+                                <i class="fab fa-cc-mastercard"></i>
+                            </div>
+                            <div class="payment-method-info">
+                                <div class="payment-method-name">Mastercard ending in 8901</div>
+                                <div class="payment-method-expiry">Expires 12/2024</div>
+                            </div>
+                            <div class="payment-method-actions">
+                                <button class="btn btn-icon">
+                                    <i class="fas fa-pen"></i>
+                                </button>
+                                <button class="btn btn-icon">
+                                    <i class="fas fa-trash-alt"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Saved Locations -->
+                <div class="section-card">
+                    <div class="section-header">
+                        <h3>Saved Locations</h3>
+                        <button class="btn btn-text">
+                            <i class="fas fa-plus"></i>
+                            Add Place
+                        </button>
+                    </div>
+                    <div class="saved-locations">
+                        <div class="saved-location">
+                            <div class="location-icon">
+                                <i class="fas fa-home"></i>
+                            </div>
+                            <div class="location-info">
+                                <div class="location-name">Home</div>
+                                <div class="location-address">123 Main St, Anytown, ST 12345</div>
+                            </div>
+                            <div class="location-actions">
+                                <button class="btn btn-icon">
+                                    <i class="fas fa-pen"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="saved-location">
+                            <div class="location-icon">
+                                <i class="fas fa-briefcase"></i>
+                            </div>
+                            <div class="location-info">
+                                <div class="location-name">Work</div>
+                                <div class="location-address">456 Business Ave, Commerce City, ST 12345</div>
+                            </div>
+                            <div class="location-actions">
+                                <button class="btn btn-icon">
+                                    <i class="fas fa-pen"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="saved-location">
+                            <div class="location-icon">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <div class="location-info">
+                                <div class="location-name">Favorite Restaurant</div>
+                                <div class="location-address">789 Cuisine St, Foodville, ST 12345</div>
+                            </div>
+                            <div class="location-actions">
+                                <button class="btn btn-icon">
+                                    <i class="fas fa-pen"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+   
+    <!-- JavaScript Files -->
+    <script src="../js/main.js"></script>
+    <script src="../js/settings.js"></script>
+<script src="../js/dark-theme.js"></script>
+</body>
+</html>

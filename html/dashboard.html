@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="../css/preload-dark.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard - Elysiar</title>
+    <meta
+      name="description"
+      content="Welcome to your Elysiar dashboard. View your ride history, manage your profile, and book new rides."
+    />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../images/favicon.png" />
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="../css/base.css" />
+    <link rel="stylesheet" href="../css/header.css" />
+    <link rel="stylesheet" href="../css/footer.css" />
+    <link rel="stylesheet" href="../css/profile.css" />
+    <link rel="stylesheet" href="../css/dashboard.css" />
+    <link rel="stylesheet" href="../css/extracted-common.css" />
+    <link rel="stylesheet" href="../css/custom.css" />
+
+    <!-- Font Awesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+
+    <!-- JavaScript Files -->
+    <script src="../js/navbar.js"></script>
+    <script src="../js/update_css.js"></script>
+    <link rel="stylesheet" href="../css/dark-theme.css" />
+  </head>
+  <body class="dashboard-page">
+    <header class="header" id="header">
+      <!-- Header content will be loaded by JavaScript -->
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <div class="dashboard-container">
+        <div class="dashboard-welcome">
+          <h1>Welcome back, <span id="welcome-name">User</span></h1>
+          <p>Here's an overview of your account and recent activities.</p>
+        </div>
+
+        <div class="dashboard-stats">
+          <div class="stat-card">
+            <div class="stat-card-icon">
+              <i class="fas fa-route"></i>
+            </div>
+            <h3>Total Rides</h3>
+            <div class="stat-value" id="total-rides">24</div>
+            <div class="stat-change positive">+3 this month</div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-card-icon">
+              <i class="fas fa-dollar-sign"></i>
+            </div>
+            <h3>Total Spent</h3>
+            <div class="stat-value" id="total-spent">$537.50</div>
+            <div class="stat-change">$45.75 this month</div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-card-icon">
+              <i class="fas fa-star"></i>
+            </div>
+            <h3>Average Rating</h3>
+            <div class="stat-value" id="avg-rating">4.9</div>
+            <div class="rating-stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-card-icon">
+              <i class="fas fa-medal"></i>
+            </div>
+            <h3>Loyalty Points</h3>
+            <div class="stat-value" id="loyalty-points">240</div>
+            <div class="stat-change positive">+15 this month</div>
+          </div>
+        </div>
+
+        <div class="dashboard-quick-actions">
+          <a href="booking.html" class="action-card">
+            <div class="action-icon">
+              <i class="fas fa-car"></i>
+            </div>
+            <h3>Book a Ride</h3>
+            <p>Get a ride in minutes</p>
+          </a>
+
+          <a href="history.html" class="action-card">
+            <div class="action-icon">
+              <i class="fas fa-history"></i>
+            </div>
+            <h3>Trip History</h3>
+            <p>View your past trips</p>
+          </a>
+
+          <a href="profile.html" class="action-card">
+            <div class="action-icon">
+              <i class="fas fa-user"></i>
+            </div>
+            <h3>Edit Profile</h3>
+            <p>Update your information</p>
+          </a>
+
+          <a href="payments.html" class="action-card">
+            <div class="action-icon">
+              <i class="fas fa-credit-card"></i>
+            </div>
+            <h3>Payments</h3>
+            <p>Manage payment methods</p>
+          </a>
+        </div>
+
+        <!-- Recent Activity Section -->
+        <div class="dashboard-activity">
+          <div class="activity-header">
+            <h2>Recent Activity</h2>
+            <a href="history.html" class="view-all">View All</a>
+          </div>
+
+          <div class="activity-list">
+            <div class="activity-item">
+              <div class="activity-icon">
+                <i class="fas fa-car"></i>
+              </div>
+              <div class="activity-content">
+                <div class="activity-title">Ride to SFO Airport</div>
+                <div class="activity-details"
+                  >From: 123 Main St, San Francisco, CA</div
+                >
+              </div>
+              <div class="activity-meta">
+                <div class="activity-price">$35.50</div>
+                <div class="activity-time">May 25, 2025 at 2:30 PM</div>
+              </div>
+            </div>
+
+            <div class="activity-item">
+              <div class="activity-icon">
+                <i class="fas fa-star"></i>
+              </div>
+              <div class="activity-content">
+                <div class="activity-title">You rated your driver</div>
+                <div class="activity-details">
+                  Driver: Michael Johnson
+                  <div class="rating-stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                </div>
+              </div>
+              <div class="activity-meta">
+                <div class="activity-time">May 25, 2025 at 3:45 PM</div>
+              </div>
+            </div>
+
+            <div class="activity-item">
+              <div class="activity-icon">
+                <i class="fas fa-car"></i>
+              </div>
+              <div class="activity-content">
+                <div class="activity-title">Ride from SFO Airport</div>
+                <div class="activity-details"
+                  >To: 123 Main St, San Francisco, CA</div
+                >
+              </div>
+              <div class="activity-meta">
+                <div class="activity-price">$32.75</div>
+                <div class="activity-time">May 20, 2025 at 9:15 AM</div>
+              </div>
+            </div>
+
+            <div class="activity-item">
+              <div class="activity-icon">
+                <i class="fas fa-credit-card"></i>
+              </div>
+              <div class="activity-content">
+                <div class="activity-title">Added new payment method</div>
+                <div class="activity-details">Visa card ending in 4242</div>
+              </div>
+              <div class="activity-meta">
+                <div class="activity-time">May 18, 2025 at 11:30 AM</div>
+              </div>
+            </div>
+
+            <div class="activity-item">
+              <div class="activity-icon">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <div class="activity-content">
+                <div class="activity-title">Added new address</div>
+                <div class="activity-details"
+                  >Home: 123 Main St, San Francisco, CA</div
+                >
+              </div>
+              <div class="activity-meta">
+                <div class="activity-time">May 17, 2025 at 5:15 PM</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Bottom Navigation for Mobile -->
+    <nav class="bottom-nav">
+      <ul class="bottom-nav-list">
+        <li class="bottom-nav-item">
+          <a href="index.html" class="bottom-nav-link">
+            <i class="fas fa-home bottom-nav-icon"></i>
+            <span>Home</span>
+          </a>
+        </li>
+        <li class="bottom-nav-item">
+          <a href="booking.html" class="bottom-nav-link">
+            <i class="fas fa-car bottom-nav-icon"></i>
+            <span>Ride</span>
+          </a>
+        </li>
+        <li class="bottom-nav-item">
+          <a href="dashboard.html" class="bottom-nav-link active">
+            <i class="fas fa-tachometer-alt bottom-nav-icon"></i>
+            <span>Dashboard</span>
+          </a>
+        </li>
+        <li class="bottom-nav-item">
+          <a href="profile.html" class="bottom-nav-link">
+            <i class="fas fa-user bottom-nav-icon"></i>
+            <span>Profile</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-bottom">
+          <div class="footer-copyright">
+            &copy; 2025 Elysiar. All rights reserved.
+          </div>
+          <div class="footer-legal">
+            <a href="#" class="footer-legal-link">Privacy</a>
+            <a href="#" class="footer-legal-link">Terms</a>
+            <a href="#" class="footer-legal-link">Cookies</a>
+            <a href="#" class="footer-legal-link">Help</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- JavaScript Files -->
+    <script src="../js/main.js"></script>
+    <script src="../js/auth.js"></script>
+    <script src="../js/profile.js"></script>
+    <script src="../js/navigation.js"></script>
+    <script src="../js/settings.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        // Check if user is logged in
+        if (!window.authFunctions.checkAuth()) {
+          window.location.href = "login.html?redirect=dashboard.html";
+          return;
+        }
+
+        // Load user data
+        const user = JSON.parse(localStorage.getItem("user") || "{}");
+
+        // Update welcome message
+        const welcomeName = document.getElementById("welcome-name");
+        if (welcomeName) {
+          welcomeName.textContent = user.name?.split(" ")[0] || "User";
+        }
+
+        // Update profile sidebar
+        const profileName = document.getElementById("profile-name");
+        const profileEmail = document.getElementById("profile-email");
+        const profileAvatar = document.getElementById("profile-avatar");
+
+        if (profileName) {
+          profileName.textContent = user.name || "User";
+        }
+
+        if (profileEmail) {
+          profileEmail.textContent = user.email || "";
+        }
+
+        if (profileAvatar) {
+          if (user.photoUrl) {
+            profileAvatar.innerHTML = `<img src="${user.photoUrl}" alt="${
+              user.name || "User"
+            }">`;
+          } else {
+            const initials = getInitials(user.name || "User");
+            profileAvatar.innerHTML = `<div class="avatar-placeholder">${initials}</div>`;
+          }
+        }
+
+        // Update stats
+        const totalRides = document.getElementById("total-rides");
+        const totalSpent = document.getElementById("total-spent");
+        const avgRating = document.getElementById("avg-rating");
+        const loyaltyPoints = document.getElementById("loyalty-points");
+
+        if (totalRides && user.rideHistory) {
+          totalRides.textContent = user.rideHistory.length || "0";
+        }
+
+        if (totalSpent && user.rideHistory) {
+          const spent =
+            user.rideHistory?.reduce(
+              (total, ride) => total + (ride.fare || 0),
+              0
+            ) || 0;
+          totalSpent.textContent = `$${spent.toFixed(2)}`;
+        }
+
+        if (avgRating) {
+          avgRating.textContent = user.rating || "0.0";
+        }
+
+        if (loyaltyPoints) {
+          loyaltyPoints.textContent = user.loyaltyPoints || "0";
+        }
+
+        // Update saved addresses
+        const savedAddresses = document.getElementById("saved-addresses");
+        if (savedAddresses && user.addresses && user.addresses.length > 0) {
+          savedAddresses.innerHTML = "";
+
+          user.addresses.forEach((address) => {
+            const addressItem = document.createElement("div");
+            addressItem.className = "saved-address";
+            addressItem.innerHTML = `
+                        <div class="address-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="address-details">
+                            <h4>${address.name}</h4>
+                            <p>${address.address}</p>
+                        </div>
+                    `;
+            savedAddresses.appendChild(addressItem);
+          });
+        }
+
+        // Helper function to get user initials
+        function getInitials(name) {
+          return name
+            .split(" ")
+            .map((word) => word.charAt(0))
+            .join("")
+            .toUpperCase()
+            .slice(0, 2);
+        }
+      });
+    </script>
+    <script src="../js/dark-theme.js"></script>
+  </body>
+</html>

@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="../css/preload-dark.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FAQ - Elysiar</title>
+    <meta
+      name="description"
+      content="Frequently asked questions about Elysiar ride-hailing services."
+    />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../images/favicon.png" />
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="../css/base.css" />
+    <link rel="stylesheet" href="../css/header.css" />
+    <link rel="stylesheet" href="../css/footer.css" />
+
+    <link rel="stylesheet" href="../css/custom.css" />
+    <link rel="stylesheet" href="../css/faq.css" />
+
+    <!-- Font Awesome Icons -->
+    <link
+      rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+
+    <!-- JavaScript Files -->
+    <script src="../js/path-helper.js"></script>
+    <script src="../js/footer.js"></script>
+    <script src="../js/navbar.js"></script>
+    <script src="../js/update_css.js"></script>
+    <link rel="stylesheet" href="../css/dark-theme.css" />
+  </head>
+  <body>
+    <header class="header" id="header"></header>
+    <!-- Main Content -->
+    <main class="main-content">
+      <section class="section-padding">
+        <div class="container">
+          <div class="section-header text-center">
+            <h1 class="section-title">Frequently Asked Questions</h1>
+            <p class="section-subtitle">
+              Find answers to common questions about Elysiar services
+            </p>
+          </div>
+
+          <div class="faq-search">
+            <div class="input-group">
+              <i class="fas fa-search"></i>
+              <input
+                type="text"
+                id="faq-search-input"
+                placeholder="Search for questions"
+                class="form-control"
+              />
+            </div>
+          </div>
+
+          <div class="faq-categories">
+            <button class="faq-category active" data-category="all">All</button>
+            <button class="faq-category" data-category="account">
+              Account
+            </button>
+            <button class="faq-category" data-category="booking">
+              Booking
+            </button>
+            <button class="faq-category" data-category="payment">
+              Payment
+            </button>
+            <button class="faq-category" data-category="safety">Safety</button>
+          </div>
+
+          <div class="faq-container">
+            <!-- Account FAQs -->
+            <div class="faq-item" data-category="account">
+              <div class="faq-question">
+                <h3>How do I create an Elysiar account?</h3>
+                <span class="faq-arrow">→</span>
+              </div>
+              <div class="faq-answer">
+                <p>
+                  To create an Elysiar account, download our app or visit our
+                  website and click on "Sign Up". You'll need to provide your
+                  name, email address, phone number, and create a password. Once
+                  you've verified your email and phone number, your account will
+                  be active and ready to use.
+                </p>
+              </div>
+            </div>
+
+            <div class="faq-item" data-category="account">
+              <div class="faq-question">
+                <h3>How do I reset my password?</h3>
+                <span class="faq-arrow">→</span>
+              </div>
+              <div class="faq-answer">
+                <p>
+                  To reset your password, click on "Forgot Password" on the
+                  login screen. Enter the email address associated with your
+                  account, and we'll send you a link to create a new password.
+                  Follow the instructions in the email to reset your password
+                  securely.
+                </p>
+              </div>
+            </div>
+
+            <!-- Booking FAQs -->
+            <div class="faq-item" data-category="booking">
+              <div class="faq-question">
+                <h3>How do I book a ride?</h3>
+                <span class="faq-arrow">→</span>
+              </div>
+              <div class="faq-answer">
+                <p>Booking a ride with Elysiar is simple:</p>
+                <ol>
+                  <li>Open the app or visit our website</li>
+                  <li>Enter your pickup location and destination</li>
+                  <li>Select the type of vehicle you prefer</li>
+                  <li>Review the estimated fare and arrival time</li>
+                  <li>Confirm your booking</li>
+                </ol>
+                <p>
+                  You'll receive confirmation of your booking and can track your
+                  driver in real-time.
+                </p>
+              </div>
+            </div>
+
+            <div class="faq-item" data-category="booking">
+              <div class="faq-question">
+                <h3>Can I schedule a ride in advance?</h3>
+                <span class="faq-arrow">→</span>
+              </div>
+              <div class="faq-answer">
+                <p>
+                  Yes, you can schedule rides up to 7 days in advance. On the
+                  booking screen, tap on "Schedule" instead of "Request Now",
+                  select your preferred date and time, and complete your
+                  booking. You'll receive reminders before your scheduled ride,
+                  and a driver will be assigned when it's time for your pickup.
+                </p>
+              </div>
+            </div>
+
+            <!-- Payment FAQs -->
+            <div class="faq-item" data-category="payment">
+              <div class="faq-question">
+                <h3>What payment methods are accepted?</h3>
+                <span class="faq-arrow">→</span>
+              </div>
+              <div class="faq-answer">
+                <p>Elysiar accepts various payment methods including:</p>
+                <ul>
+                  <li>
+                    Credit and debit cards (Visa, MasterCard, American Express)
+                  </li>
+                  <li>PayPal</li>
+                  <li>Apple Pay and Google Pay</li>
+                  <li>Elysiar credits</li>
+                  <li>Cash (in selected regions)</li>
+                </ul>
+                <p>
+                  You can manage your payment methods in the "Payment" section
+                  of your account.
+                </p>
+              </div>
+            </div>
+
+            <div class="faq-item" data-category="payment">
+              <div class="faq-question">
+                <h3>How do I get a receipt for my ride?</h3>
+                <span class="faq-arrow">→</span>
+              </div>
+              <div class="faq-answer">
+                <p>
+                  After completing a ride, you'll automatically receive a
+                  receipt via email. You can also view and download all your
+                  ride receipts from the "Trip History" section in your account.
+                  Each receipt includes details about the trip, fare breakdown,
+                  and payment method used.
+                </p>
+              </div>
+            </div>
+
+            <!-- Safety FAQs -->
+            <div class="faq-item" data-category="safety">
+              <div class="faq-question">
+                <h3>What safety measures does Elysiar have in place?</h3>
+                <span class="faq-arrow">→</span>
+              </div>
+              <div class="faq-answer">
+                <p>Elysiar prioritizes your safety through several measures:</p>
+                <ul>
+                  <li>Thorough background checks for all drivers</li>
+                  <li>Real-time trip tracking and sharing</li>
+                  <li>In-app emergency assistance button</li>
+                  <li>Driver and vehicle photo verification before pickup</li>
+                  <li>Contactless ride options</li>
+                  <li>Anonymous phone number masking for privacy</li>
+                  <li>Post-ride feedback and rating system</li>
+                </ul>
+                <p>
+                  All rides are also insured and monitored for your safety and
+                  peace of mind.
+                </p>
+              </div>
+            </div>
+
+            <div class="faq-item" data-category="safety">
+              <div class="faq-question">
+                <h3>How can I report an issue with my ride?</h3>
+                <span class="faq-arrow">→</span>
+              </div>
+              <div class="faq-answer">
+                <p>
+                  If you experience any issues during or after your ride, you
+                  can report them through the following channels:
+                </p>
+                <ul>
+                  <li>
+                    In the app: Go to "Trip History", select the relevant trip,
+                    and tap "Report an Issue"
+                  </li>
+                  <li>
+                    Website: Log in to your account, visit "Help" and select
+                    "Report a Problem"
+                  </li>
+                  <li>Contact support directly through our 24/7 helpline</li>
+                </ul>
+                <p>
+                  Our support team will investigate the matter and respond
+                  within 24 hours.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-not-found text-center">
+            <i class="fas fa-search fa-3x"></i>
+            <h3>No results found</h3>
+            <p>
+              We couldn't find any FAQs matching your search. Try different
+              keywords or contact our support team.
+            </p>
+            <a href="./contact.html" class="btn btn-primary">Contact Us</a>
+          </div>
+
+          <div class="text-center mt-5">
+            <p>Still have questions?</p>
+            <div class="help-options">
+              <a href="./contact.html" class="help-option">
+                <i class="fas fa-envelope"></i>
+                <h4>Contact Us</h4>
+                <p>Send us a message and we'll get back to you</p>
+              </a>
+              <a href="./support.html" class="help-option">
+                <i class="fas fa-headset"></i>
+                <h4>Customer Support</h4>
+                <p>Get immediate help from our support team</p>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- JavaScript Files -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // No need to add visible class since we're showing items by default in CSS
+
+        // Toggle FAQ answers with smooth animation
+        const faqQuestions = document.querySelectorAll(".faq-question");
+        faqQuestions.forEach((question) => {
+          question.addEventListener("click", () => {
+            const faqItem = question.closest(".faq-item");
+
+            // Close other open items
+            const currentlyActive = document.querySelector(".faq-item.active");
+            if (currentlyActive && currentlyActive !== faqItem) {
+              currentlyActive.classList.remove("active");
+            }
+
+            // Toggle clicked item
+            faqItem.classList.toggle("active");
+          });
+        });
+
+        // Filter FAQs by category
+        const categoryButtons = document.querySelectorAll(".faq-category");
+        categoryButtons.forEach((button) => {
+          button.addEventListener("click", () => {
+            const category = button.getAttribute("data-category");
+
+            // Update active button
+            categoryButtons.forEach((btn) => btn.classList.remove("active"));
+            button.classList.add("active");
+
+            // Filter FAQ items
+            const faqItems = document.querySelectorAll(".faq-item");
+
+            faqItems.forEach((item) => {
+              if (
+                category === "all" ||
+                item.getAttribute("data-category") === category
+              ) {
+                item.style.display = "block";
+              } else {
+                item.style.display = "none";
+              }
+            });
+
+            // Check if no results to show message
+            checkNoResults();
+          });
+        });
+
+        // Search functionality
+        const searchInput = document.getElementById("faq-search-input");
+        let searchTimeout;
+
+        searchInput.addEventListener("input", function () {
+          clearTimeout(searchTimeout);
+          const searchText = this.value.toLowerCase();
+
+          // Clear category filters when searching
+          categoryButtons.forEach((btn) => btn.classList.remove("active"));
+          document
+            .querySelector('[data-category="all"]')
+            .classList.add("active");
+
+          searchTimeout = setTimeout(() => {
+            const faqItems = document.querySelectorAll(".faq-item");
+            let hasResults = false;
+
+            faqItems.forEach((item) => {
+              const question = item
+                .querySelector(".faq-question")
+                .textContent.toLowerCase();
+              const answer = item
+                .querySelector(".faq-answer")
+                .textContent.toLowerCase();
+
+              if (
+                question.includes(searchText) ||
+                answer.includes(searchText)
+              ) {
+                item.style.display = "block";
+                hasResults = true;
+              } else {
+                item.style.display = "none";
+              }
+            });
+
+            // Check if no results to show message
+            checkNoResults();
+          }, 300);
+        });
+
+        // Function to check if no results and show message
+        function checkNoResults() {
+          const visibleFaqs = Array.from(
+            document.querySelectorAll(".faq-item")
+          ).filter((item) => item.style.display !== "none");
+          const noResultsMessage = document.querySelector(".faq-not-found");
+
+          if (visibleFaqs.length === 0) {
+            noResultsMessage.style.display = "block";
+          } else {
+            noResultsMessage.style.display = "none";
+          }
+        }
+      });
+    </script>
+    <script src="../js/dark-theme.js"></script>
+  </body>
+</html>

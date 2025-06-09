@@ -1,0 +1,165 @@
+/* Dark Theme CSS for Elysiar */
+
+/* Apply dark theme to all pages */
+body {
+  background: var(--bg-gradient);
+  color: var(--text-primary);
+  min-height: 100vh;
+}
+
+/* Standard element overrides */
+.card, 
+.panel, 
+.container-card, 
+.info-box, 
+.feature-box {
+  background-color: #1E1E1E;
+  border-color: rgba(255, 255, 255, 0.1);
+  color: #FFFFFF;
+}
+
+/* Additional Dark Theme Styles and Overrides */
+
+/* Inputs and Form Fields */
+input, textarea, select {
+  background: var(--card-bg);
+  border: 2px solid rgba(107, 70, 254, 0.2);
+  color: var(--text-primary);
+}
+
+input:focus, textarea:focus, select:focus {
+  background: var(--card-bg-hover);
+  border-color: var(--primary-purple);
+  box-shadow: 0 0 0 3px rgba(107, 70, 254, 0.2);
+}
+
+/* Card and Panel Styles */
+.card, 
+.panel, 
+.glass-card, 
+.info-item, 
+.contact-form-section, 
+.contact-info-item {
+  background: var(--surface-color);
+  border: 1px solid var(--border-color-highlight);
+  box-shadow: var(--shadow-md);
+}
+
+/* Button Styles */
+.btn-secondary {
+  background-color: #2D2D2D;
+  color: var(--text-primary);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.btn-outline {
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: var(--text-primary);
+}
+
+/* Scrollbar Styles */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1E1E1E;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #444444;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555555;
+}
+
+/* Dropdown Styles */
+.dropdown-menu {
+  background-color: #252525;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.dropdown-item:hover {
+  background-color: #2D2D2D;
+}
+
+/* Table Styles */
+table {
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+thead {
+  background-color: #252525;
+}
+
+tr:nth-child(even) {
+  background-color: rgba(255, 255, 255, 0.03);
+}
+
+/* Modal Styles */
+.modal-content {
+  background-color: #252525;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Tooltip Styles */
+.tooltip {
+  background-color: #252525;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Header and Navigation */
+.header {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Footer */
+.footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Immediate Dark Theme Application */
+:root {
+  color-scheme: dark;
+}
+
+/* Preloader to prevent flash of light content */
+html {
+  background-color: #121212;
+}
+
+body {
+  visibility: visible !important;
+}
+
+/* Dark theme colors for HTML elements */
+html, body {
+  background-color: #121212;
+  color: #FFFFFF;
+}
+
+/* Force dark scrollbars in supported browsers */
+* {
+  scrollbar-color: #555 #1E1E1E;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1E1E1E;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #555;
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #777;
+}

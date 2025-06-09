@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="../css/preload-dark.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Payment Methods - Elysiar</title>
+    <meta
+      name="description"
+      content="Manage your payment methods for Elysiar ride-hailing service."
+    />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../images/favicon.png" />
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="../css/base.css" />
+    <link rel="stylesheet" href="../css/header.css" />
+    <link rel="stylesheet" href="../css/footer.css" />
+
+    <link rel="stylesheet" href="../css/payments.css" />
+    <link rel="stylesheet" href="../css/extracted-common.css" />
+    <link rel="stylesheet" href="../css/custom.css" />
+
+    <!-- Font Awesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+
+    <!-- JavaScript Files -->
+    <script src="../js/footer.js"></script>
+    <script src="../js/navbar.js"></script>
+    <script src="../js/update_css.js"></script>
+    <link rel="stylesheet" href="../css/dark-theme.css" />
+  </head>
+  <body>
+    <header class="header" id="header"></header>
+
+    <!-- Mobile Menu -->
+
+    <!-- Payment Methods Page Content -->
+    <main class="main-content payment-page">
+      <div class="container">
+        <div class="page-header">
+          <h1>Payment Methods</h1>
+          <p class="page-description">
+            Manage your payment options for seamless rides
+          </p>
+        </div>
+
+        <div class="payment-container">
+          <!-- Saved Payment Methods -->
+          <div class="card">
+            <div class="card-header">
+              <h2 class="card-title">
+                <i class="fas fa-credit-card"></i> Your Payment Methods
+              </h2>
+              <button class="btn btn-primary">
+                <i class="fas fa-plus"></i>
+                Add New Card
+              </button>
+            </div>
+
+            <!-- Payment Methods List -->
+            <div class="payment-methods-list">
+              <div class="payment-method active">
+                <div class="payment-icon visa">
+                  <i class="fab fa-cc-visa"></i>
+                </div>
+                <div class="payment-details">
+                  <h3 class="payment-name">Visa ending in 4567</h3>
+                  <p class="payment-info">
+                    Expires 09/2025
+                    <span class="payment-badge default">Default</span>
+                  </p>
+                </div>
+                <div class="payment-actions">
+                  <button class="btn-icon" aria-label="Edit card">
+                    <i class="fas fa-pen"></i>
+                  </button>
+                  <button class="btn-icon" aria-label="Delete card">
+                    <i class="fas fa-trash-alt"></i>
+                  </button>
+                </div>
+              </div>
+
+              <div class="payment-method">
+                <div class="payment-icon mastercard">
+                  <i class="fab fa-cc-mastercard"></i>
+                </div>
+                <div class="payment-details">
+                  <h3 class="payment-name">Mastercard ending in 8901</h3>
+                  <p class="payment-info">Expires 12/2024</p>
+                </div>
+                <div class="payment-actions">
+                  <button class="btn-icon" aria-label="Edit card">
+                    <i class="fas fa-pen"></i>
+                  </button>
+                  <button class="btn-icon" aria-label="Delete card">
+                    <i class="fas fa-trash-alt"></i>
+                  </button>
+                </div>
+              </div>
+
+              <div class="payment-method">
+                <div class="payment-icon amex">
+                  <i class="fab fa-cc-amex"></i>
+                </div>
+                <div class="payment-details">
+                  <h3 class="payment-name">American Express ending in 3456</h3>
+                  <p class="payment-info">Expires 03/2026</p>
+                </div>
+                <div class="payment-actions">
+                  <button class="btn-icon" aria-label="Edit card">
+                    <i class="fas fa-pen"></i>
+                  </button>
+                  <button class="btn-icon" aria-label="Delete card">
+                    <i class="fas fa-trash-alt"></i>
+                  </button>
+                </div>
+              </div>
+
+              <div class="payment-method">
+                <div class="payment-icon paypal">
+                  <i class="fab fa-cc-paypal"></i>
+                </div>
+                <div class="payment-details">
+                  <h3 class="payment-name">PayPal</h3>
+                  <p class="payment-info">user@example.com</p>
+                </div>
+                <div class="payment-actions">
+                  <button class="btn-icon" aria-label="Edit PayPal">
+                    <i class="fas fa-pen"></i>
+                  </button>
+                  <button class="btn-icon" aria-label="Delete PayPal">
+                    <i class="fas fa-trash-alt"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Add New Payment Method -->
+          <div class="card">
+            <div class="card-header">
+              <h2 class="card-title">
+                <i class="fas fa-plus-circle"></i> Add New Payment Method
+              </h2>
+              <div class="card-actions">
+                <div class="supported-cards">
+                  <i class="fab fa-cc-visa" title="Visa"></i>
+                  <i class="fab fa-cc-mastercard" title="Mastercard"></i>
+                  <i class="fab fa-cc-amex" title="American Express"></i>
+                  <i class="fab fa-cc-paypal" title="PayPal"></i>
+                </div>
+              </div>
+            </div>
+
+            <div class="payment-form">
+              <div class="form-group">
+                <label for="card-name">Name on Card</label>
+                <input
+                  type="text"
+                  id="card-name"
+                  class="input-field"
+                  placeholder="John Doe"
+                />
+                <div class="form-hint">
+                  Enter the name as it appears on your card
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="card-number">Card Number</label>
+                <div class="input-wrapper">
+                  <input
+                    type="text"
+                    id="card-number"
+                    class="input-field"
+                    placeholder="1234 5678 9012 3456"
+                  />
+                  <div class="card-type-indicator">
+                    <i class="far fa-credit-card"></i>
+                  </div>
+                </div>
+                <div class="form-hint">Enter your 16-digit card number</div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="expiry-date">Expiration Date</label>
+                  <input
+                    type="text"
+                    id="expiry-date"
+                    class="input-field"
+                    placeholder="MM/YY"
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label for="cvv">CVV</label>
+                  <input
+                    type="text"
+                    id="cvv"
+                    class="input-field"
+                    placeholder="123"
+                  />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="billing-address">Billing Address</label>
+                <input
+                  type="text"
+                  id="billing-address"
+                  class="input-field"
+                  placeholder="123 Main St"
+                />
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="city">City</label>
+                  <input
+                    type="text"
+                    id="city"
+                    class="input-field"
+                    placeholder="Anytown"
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label for="zip">ZIP Code</label>
+                  <input
+                    type="text"
+                    id="zip"
+                    class="input-field"
+                    placeholder="12345"
+                  />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="checkbox-label">
+                  <input type="checkbox" id="set-default" />
+                  <span>Set as default payment method</span>
+                </label>
+              </div>
+
+              <button class="btn btn-primary add-card-btn">
+                <i class="fas fa-plus-circle"></i>
+                Add Payment Method
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- JavaScript Files -->
+    <script src="../js/main.js"></script>
+    <script src="../js/settings.js"></script>
+    <script src="../js/payments.js"></script>
+    <script src="../js/dark-theme.js"></script>
+
+    <script>
+      // Initialize payment processing
+      document.addEventListener("DOMContentLoaded", function () {
+        // Add card number masking and validation
+        const cardInput = document.getElementById("card-number");
+        if (cardInput) {
+          cardInput.addEventListener("keypress", function (e) {
+            if (!/^\d*$/.test(e.key) && e.key !== "Backspace") {
+              e.preventDefault();
+            }
+          });
+
+          // Auto-focus next input when card number is complete
+          cardInput.addEventListener("input", function () {
+            if (this.value.replace(/\s/g, "").length >= 16) {
+              document.getElementById("expiry-date").focus();
+            }
+          });
+        }
+
+        // Expiry date formatting (MM/YY)
+        const expiryInput = document.getElementById("expiry-date");
+        if (expiryInput) {
+          expiryInput.addEventListener("input", function (e) {
+            let value = e.target.value.replace(/\D/g, "");
+            if (value.length > 2) {
+              value = value.substring(0, 2) + "/" + value.substring(2, 4);
+            }
+            e.target.value = value;
+          });
+        }
+      });
+    </script>
+  </body>
+</html>

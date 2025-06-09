@@ -1,0 +1,182 @@
+/* Enhanced Button Styles */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.875rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.5;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    gap: 0.5rem;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, var(--primary-blue), #2563eb);
+    color: white;
+    border: none;
+    box-shadow: 0 4px 6px -1px rgba(37, 99, 235, 0.1),
+                0 2px 4px -2px rgba(37, 99, 235, 0.1);
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 12px -1px rgba(37, 99, 235, 0.2),
+                0 4px 6px -2px rgba(37, 99, 235, 0.1);
+    background: linear-gradient(135deg, #2563eb, #1d4ed8);
+}
+
+/* Enhanced Card Styles */
+.feature-card {
+    background: var(--surface-color);
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+                0 2px 4px -2px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+/* Feature card hover - now handled by unified system in landing.css */
+
+.feature-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, rgba(37, 99, 235, 0.2), rgba(37, 99, 235, 0.3));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    color: var(--primary-blue);
+    font-size: 1.5rem;
+}
+
+/* Enhanced Header */
+.header {
+    backdrop-filter: blur(8px);
+    background: rgba(17, 24, 39, 0.8) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease, background 0.3s ease, border-color 0.3s ease;
+}
+
+/* Enhanced Vehicle Cards */
+.vehicle-card {
+    background: var(--surface-color);
+    border-radius: 20px;
+    padding: 2rem;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+                0 2px 4px -2px rgba(0, 0, 0, 0.1);
+}
+
+.vehicle-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(to right, var(--primary-blue), #2563eb);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+/* Vehicle card before element - enhanced by unified system */
+.vehicle-card:hover::before {
+    transform: scaleX(1);
+}
+
+/* Vehicle card hover - now handled by unified system in landing.css */
+
+.vehicle-image {
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.vehicle-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+}
+
+.vehicle-info h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+}
+
+.vehicle-description {
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+}
+
+.vehicle-features {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.vehicle-feature {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+}
+
+.vehicle-feature i {
+    color: var(--primary-blue);
+}
+
+/* Form Enhancements */
+.input-group {
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+
+.input-group input,
+.input-group select {
+    width: 100%;
+    padding: 1rem 1rem 1rem 3rem;
+    border: 1.5px solid rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background: var(--surface-color);
+}
+
+.input-group input:focus,
+.input-group select:focus {
+    border-color: var(--primary-blue);
+    box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1);
+    outline: none;
+}
+
+.input-group i {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-secondary);
+    transition: color 0.3s ease;
+}
+
+.input-group input:focus + i,
+.input-group select:focus + i {
+    color: var(--primary-blue);
+}
+
+
