@@ -334,9 +334,6 @@
   color: var(--white);
 }
 
-.progress-step.completed .step-number::after {
-  content: "✓";
-}
 
 .progress-step.completed:not(:last-child)::after {
   background-color: var(--success-green);
