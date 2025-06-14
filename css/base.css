@@ -352,7 +352,8 @@ html {
 
 .card-hover-effect:hover {
     border-color: var(--primary-blue);
-    background-image: linear-gradient(to bottom right, rgba(26, 115, 232, 0.05), transparent);
+    background-image
+    bottom right, rgba(26, 115, 232, 0.05), transparent);
 }
 
 .card-bordered {

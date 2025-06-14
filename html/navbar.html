@@ -1,358 +1,388 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <link rel="stylesheet" href="../css/preload-dark.css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <link rel="stylesheet" href="../css/preload-dark.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Navigation - Elysiar</title>
-    <meta name="description" content="Navigation component for Elysiar ride-hailing service">
-    
+    <meta
+      name="description"
+      content="Navigation component for Elysiar ride-hailing service"
+    />
+
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="../images/favicon.png">
-    
+    <link rel="icon" type="image/png" href="../images/favicon.png" />
+
     <!-- CSS Files -->
-    <link rel="stylesheet" href="../css/base.css">
-    <link rel="stylesheet" href="../css/header.css">
-    <link rel="stylesheet" href="../css/components.css">
-<link rel="stylesheet" href="../css/dark-theme.css">
-</head>
-<body>
+    <link rel="stylesheet" href="../css/base.css" />
+    <link rel="stylesheet" href="../css/header.css" />
+    <link rel="stylesheet" href="../css/components.css" />
+    <link rel="stylesheet" href="../css/dark-theme.css" />
+  </head>
+  <body>
     <header class="header" id="header">
-  <div class="container header-container">
-    <a href="./index.html" class="logo" id="home-link" data-page="index">
-      <img src="../images/logo.png" alt="Elysiar Logo" />
-      <span class="logo-text">Elysiar</span>
-    </a>
-
-    <!-- Desktop Navigation -->
-    <nav class="nav-desktop">
-      <ul class="nav-list">
-        <li class="nav-item">
-          <a href="./index.html" class="nav-link">Home</a>
-        </li>
-        <li class="nav-item">
-          <a href="./booking.html" class="nav-link">Ride</a>
-        </li>
-        <li class="nav-item">
-          <a href="#" class="nav-link dropdown-trigger active">
-            Account
-            <i class="fas fa-chevron-down dropdown-arrow"></i>
-          </a>
-          <div class="nav-dropdown">
-            <ul class="nav-dropdown-list">
-              <li class="nav-dropdown-item">
-                <a href="./dashboard.html" class="nav-dropdown-link">
-                  <i class="fas fa-tachometer-alt"></i>
-                  Dashboard
-                </a>
-              </li>
-              <li class="nav-dropdown-item">
-                <a href="./profile.html" class="nav-dropdown-link">
-                  <i class="fas fa-user"></i>
-                  Profile
-                </a>
-              </li>
-              <li class="nav-dropdown-item">
-                <a href="./settings.html" class="nav-dropdown-link">
-                  <i class="fas fa-cog"></i>
-                  Settings
-                </a>
-              </li>
-              <li class="nav-dropdown-item">
-                <a href="./payments.html" class="nav-dropdown-link">
-                  <i class="fas fa-credit-card"></i>
-                  Payment Methods
-                </a>
-              </li>
-
-              <li class="nav-dropdown-item">
-                <a href="./history.html" class="nav-dropdown-link">
-                  <i class="fas fa-history"></i>
-                  Trip History
-                </a>
-              </li>
-            </ul>
-          </div>
-        </li>
-        <li class="nav-item">
-          <a href="#" class="nav-link dropdown-trigger">
-            Services
-            <i class="fas fa-chevron-down dropdown-arrow"></i>
-          </a>
-          <div class="nav-dropdown">
-            <ul class="nav-dropdown-list">
-              <li class="nav-dropdown-item">
-                <a href="#" class="nav-dropdown-link">
-                  <i class="fas fa-car"></i>
-                  Standard Rides
-                </a>
-              </li>
-              <li class="nav-dropdown-item">
-                <a href="#" class="nav-dropdown-link">
-                  <i class="fas fa-star"></i>
-                  Premium Rides
-                </a>
-              </li>
-              <li class="nav-dropdown-item">
-                <a href="#" class="nav-dropdown-link">
-                  <i class="fas fa-plane"></i>
-                  Airport Transfers
-                </a>
-              </li>
-            </ul>
-          </div>
-        </li>
-        <li class="nav-item">
-          <a href="#" class="nav-link dropdown-trigger">
-            Help
-            <i class="fas fa-chevron-down dropdown-arrow"></i>
-          </a>
-          <div class="nav-dropdown">
-            <ul class="nav-dropdown-list">                                <li class="nav-dropdown-item">
-                                    <a href="./faq.html" class="nav-dropdown-link">
-                                        <i class="fas fa-question-circle"></i>
-                                        FAQ
-                                    </a>
-                                </li>
-                                <li class="nav-dropdown-item">
-                                    <a href="./contact.html" class="nav-dropdown-link">
-                                        <i class="fas fa-envelope"></i>
-                                        Contact Us
-                                    </a>
-                                </li>
-                                <li class="nav-dropdown-item">
-                                    <a href="./support.html" class="nav-dropdown-link">
-                                        <i class="fas fa-headset"></i>
-                  Support
-                </a>
-              </li>
-            </ul>
-          </div>
-        </li>
-      </ul>
-      <div class="nav-actions">
-        <div class="nav-auth-section">
-          <!-- Auth Buttons -->
-          <div class="nav-buttons">
-            <a href="./login.html" class="btn btn-outline">
-              <i class="fas fa-sign-in-alt"></i>
-              Log In
-            </a>
-            <a href="./signup.html" class="btn btn-primary">
-              <i class="fas fa-user-plus"></i>
-              Sign Up
-            </a>
-          </div>
-        </div>
-      </div>
-    </nav>
-  </div>
-  <!-- Mobile Navigation -->
-  <!-- Mobile Navigation Button -->
-  <div class="nav-mobile">
-    <button class="hamburger" id="mobile-menu-toggle" aria-label="Toggle menu">
-      <span class="hamburger-line"></span>
-      <span class="hamburger-line"></span>
-      <span class="hamburger-line"></span>
-    </button>
-  </div>
-
-  <!-- Mobile Menu -->
-  <div class="mobile-menu" id="mobile-menu">
-    <div class="container">
-      <div class="mobile-menu-header">
-        <div class="mobile-menu-brand">
+      <div class="container header-container">
+        <a href="./index.html" class="logo" id="home-link" data-page="index">
           <img src="../images/logo.png" alt="Elysiar Logo" />
           <span class="logo-text">Elysiar</span>
-        </div>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="nav-desktop">
+          <ul class="nav-list">
+            <li class="nav-item">
+              <a href="./index.html" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="./booking.html" class="nav-link">Ride</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link dropdown-trigger active">
+                Account
+                <i class="fas fa-chevron-down dropdown-arrow"></i>
+              </a>
+              <div class="nav-dropdown">
+                <ul class="nav-dropdown-list">
+                  <li class="nav-dropdown-item">
+                    <a href="./dashboard.html" class="nav-dropdown-link">
+                      <i class="fas fa-tachometer-alt"></i>
+                      Dashboard
+                    </a>
+                  </li>
+                  <li class="nav-dropdown-item">
+                    <a href="./profile.html" class="nav-dropdown-link">
+                      <i class="fas fa-user"></i>
+                      Profile
+                    </a>
+                  </li>
+                  <li class="nav-dropdown-item">
+                    <a href="./settings.html" class="nav-dropdown-link">
+                      <i class="fas fa-cog"></i>
+                      Settings
+                    </a>
+                  </li>
+                  <li class="nav-dropdown-item">
+                    <a href="./payments.html" class="nav-dropdown-link">
+                      <i class="fas fa-credit-card"></i>
+                      Payment Methods
+                    </a>
+                  </li>
+
+                  <li class="nav-dropdown-item">
+                    <a href="./history.html" class="nav-dropdown-link">
+                      <i class="fas fa-history"></i>
+                      Trip History
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link dropdown-trigger">
+                Services
+                <i class="fas fa-chevron-down dropdown-arrow"></i>
+              </a>
+              <div class="nav-dropdown">
+                <ul class="nav-dropdown-list">
+                  <li class="nav-dropdown-item">
+                    <a href="#" class="nav-dropdown-link">
+                      <i class="fas fa-car"></i>
+                      Standard Rides
+                    </a>
+                  </li>
+                  <li class="nav-dropdown-item">
+                    <a href="#" class="nav-dropdown-link">
+                      <i class="fas fa-star"></i>
+                      Premium Rides
+                    </a>
+                  </li>
+                  <li class="nav-dropdown-item">
+                    <a href="#" class="nav-dropdown-link">
+                      <i class="fas fa-plane"></i>
+                      Airport Transfers
+                    </a>
+                  </li>
+                  <li class="nav-dropdown-item">
+                    <a href="#" class="nav-dropdown-link">
+                      <i class="fas fa-route"></i>
+                      Intercity Travel
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link dropdown-trigger">
+                Help
+                <i class="fas fa-chevron-down dropdown-arrow"></i>
+              </a>
+              <div class="nav-dropdown">
+                <ul class="nav-dropdown-list">
+                  <li class="nav-dropdown-item">
+                    <a href="./faq.html" class="nav-dropdown-link">
+                      <i class="fas fa-question-circle"></i>
+                      FAQ
+                    </a>
+                  </li>
+                  <li class="nav-dropdown-item">
+                    <a href="./contact.html" class="nav-dropdown-link">
+                      <i class="fas fa-envelope"></i>
+                      Contact Us
+                    </a>
+                  </li>
+                  <li class="nav-dropdown-item">
+                    <a href="./support.html" class="nav-dropdown-link">
+                      <i class="fas fa-headset"></i>
+                      Support
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+          <div class="nav-actions">
+            <div class="nav-auth-section">
+              <!-- Auth Buttons -->
+              <div class="nav-buttons">
+                <a href="./login.html" class="btn btn-outline">
+                  <i class="fas fa-sign-in-alt"></i>
+                  Log In
+                </a>
+                <a href="./signup.html" class="btn btn-primary">
+                  <i class="fas fa-user-plus"></i>
+                  Sign Up
+                </a>
+              </div>
+            </div>
+          </div>
+        </nav>
       </div>
-      <ul class="mobile-nav-list">
-        <li class="mobile-nav-item">
-          <a href="./index.html" class="mobile-nav-link">
-            Home
-            <i class="fas fa-chevron-right"></i>
-          </a>
-        </li>
-        <li class="mobile-nav-item">
-          <a href="./booking.html" class="mobile-nav-link">
-            Ride
-            <i class="fas fa-chevron-right"></i>
-          </a>
-        </li>
-        <li class="mobile-nav-item">
-          <a
-            href="#"
-            class="mobile-nav-link has-submenu"
-            aria-expanded="false"
-            aria-controls="account-submenu"
-          >
-            <i class="fas fa-user"></i>
-            Account
-            <i class="fas fa-chevron-down dropdown-arrow"></i>
-          </a>
-          <ul class="mobile-submenu" id="account-submenu">
-            <li class="mobile-nav-item">
-              <a href="./dashboard.html" class="mobile-nav-link">
-                <i class="fas fa-tachometer-alt"></i>
-                Dashboard
-                <i class="fas fa-chevron-right"></i>
-              </a>
-            </li>
-            <li class="mobile-nav-item">
-              <a href="./history.html" class="mobile-nav-link">
-                <i class="fas fa-history"></i>
-                Trip History
-                <i class="fas fa-chevron-right"></i>
-              </a>
-            </li>
-            <li class="mobile-nav-item">
-              <a href="./profile.html" class="mobile-nav-link">
-                <i class="fas fa-user"></i>
-                Profile
-                <i class="fas fa-chevron-right"></i>
-              </a>
-            </li>
-            <li class="mobile-nav-item">
-              <a href="./payments.html" class="mobile-nav-link">
-                <i class="fas fa-credit-card"></i>
-                Payment Methods
-                <i class="fas fa-chevron-right"></i>
-              </a>
-            </li>
-            <li class="mobile-nav-item">
-              <a href="./settings.html" class="mobile-nav-link">
-                <i class="fas fa-cog"></i>
-                Settings
-                <i class="fas fa-chevron-right"></i>
-              </a>
-            </li>
-          </ul>
-        </li>
-        <li class="mobile-nav-item">
-          <a
-            href="#"
-            class="mobile-nav-link has-submenu"
-            aria-expanded="false"
-            aria-controls="services-submenu"
-          >
-            <i class="fas fa-car"></i>
-            Services
-            <i class="fas fa-chevron-down dropdown-arrow"></i>
-          </a>
-          <ul class="mobile-submenu" id="services-submenu">
-            <li class="mobile-nav-item">
-              <a href="#" class="mobile-nav-link">
-                <i class="fas fa-car"></i>
-                Standard Rides
-                <i class="fas fa-chevron-right"></i>
-              </a>
-            </li>
-            <li class="mobile-nav-item">
-              <a href="#" class="mobile-nav-link">
-                <i class="fas fa-star"></i>
-                Premium Rides
-                <i class="fas fa-chevron-right"></i>
-              </a>
-            </li>
-            <li class="mobile-nav-item">
-              <a href="#" class="mobile-nav-link">
-                <i class="fas fa-plane"></i>
-                Airport Transfers
-                <i class="fas fa-chevron-right"></i>
-              </a>
-            </li>
-            <li class="mobile-nav-item">
-              <a href="#" class="mobile-nav-link">
-                <i class="fas fa-briefcase"></i>
-                Business Travel
-                <i class="fas fa-chevron-right"></i>
-              </a>
-            </li>
-          </ul>
-        </li>
-        <li class="mobile-nav-item">
-          <a
-            href="#"
-            class="mobile-nav-link has-submenu"
-            aria-expanded="false"
-            aria-controls="safety-submenu"
-          >
-            <i class="fas fa-shield-alt"></i>
-            Safety
-            <i class="fas fa-chevron-down dropdown-arrow"></i>
-          </a>
-          <ul class="mobile-submenu" id="safety-submenu">
-            <li class="mobile-nav-item">
-              <a href="#" class="mobile-nav-link">
-                <i class="fas fa-shield-alt"></i>
-                Safety Features
-                <i class="fas fa-chevron-right"></i>
-              </a>
-            </li>
-            <li class="mobile-nav-item">
-              <a href="#" class="mobile-nav-link">
-                <i class="fas fa-book"></i>
-                Safety Guidelines
-                <i class="fas fa-chevron-right"></i>
-              </a>
-            </li>
-            <li class="mobile-nav-item">
-              <a href="#" class="mobile-nav-link">
-                <i class="fas fa-phone-alt"></i>
-                Emergency Services
-                <i class="fas fa-chevron-right"></i>
-              </a>
-            </li>
-          </ul>
-        </li>
-        <li class="mobile-nav-item">
-          <a
-            href="#"
-            class="mobile-nav-link has-submenu"
-            aria-expanded="false"
-            aria-controls="help-submenu"
-          >
-            <i class="fas fa-question-circle"></i>
-            Help
-            <i class="fas fa-chevron-down dropdown-arrow"></i>
-          </a>
-          <ul class="mobile-submenu" id="help-submenu">                            <li class="mobile-nav-item">
-                                <a href="./faq.html" class="mobile-nav-link">
-                                    <i class="fas fa-question-circle"></i>
-                                    FAQ
-                                    <i class="fas fa-chevron-right"></i>
-                                </a>
-                            </li>
-                            <li class="mobile-nav-item">
-                                <a href="./contact.html" class="mobile-nav-link">
-                                    <i class="fas fa-envelope"></i>
-                                    Contact Us
-                                    <i class="fas fa-chevron-right"></i>
-                                </a>
-                            </li>
-                            <li class="mobile-nav-item">
-                                <a href="./support.html" class="mobile-nav-link">
-                                    <i class="fas fa-headset"></i>
-                                    Support
-                                    <i class="fas fa-chevron-right"></i>
-                                </a>
-                            </li>
-          </ul>
-        </li>
-      </ul>
-      <div class="mobile-nav-buttons">
-        <a href="./login.html" class="btn btn-secondary btn-block mb-2"
-          >Log In</a
+      <!-- Mobile Navigation -->
+      <!-- Mobile Navigation Button -->
+      <div class="nav-mobile">
+        <button
+          class="hamburger"
+          id="mobile-menu-toggle"
+          aria-label="Toggle menu"
         >
-        <a href="./signup.html" class="btn btn-primary btn-block">Sign Up</a>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
       </div>
-      <div class="mobile-menu-footer">
-        <div class="mobile-social">
-          <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
-          <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-          <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+
+      <!-- Mobile Menu -->
+      <div class="mobile-menu" id="mobile-menu">
+        <div class="container">
+          <div class="mobile-menu-header">
+            <div class="mobile-menu-brand">
+              <img src="../images/logo.png" alt="Elysiar Logo" />
+              <span class="logo-text">Elysiar</span>
+            </div>
+          </div>
+          <ul class="mobile-nav-list">
+            <li class="mobile-nav-item">
+              <a href="./index.html" class="mobile-nav-link">
+                Home
+                <i class="fas fa-chevron-right"></i>
+              </a>
+            </li>
+            <li class="mobile-nav-item">
+              <a href="./booking.html" class="mobile-nav-link">
+                Ride
+                <i class="fas fa-chevron-right"></i>
+              </a>
+            </li>
+            <li class="mobile-nav-item">
+              <a
+                href="#"
+                class="mobile-nav-link has-submenu"
+                aria-expanded="false"
+                aria-controls="account-submenu"
+              >
+                <i class="fas fa-user"></i>
+                Account
+                <i class="fas fa-chevron-down dropdown-arrow"></i>
+              </a>
+              <ul class="mobile-submenu" id="account-submenu">
+                <li class="mobile-nav-item">
+                  <a href="./dashboard.html" class="mobile-nav-link">
+                    <i class="fas fa-tachometer-alt"></i>
+                    Dashboard
+                    <i class="fas fa-chevron-right"></i>
+                  </a>
+                </li>
+                <li class="mobile-nav-item">
+                  <a href="./history.html" class="mobile-nav-link">
+                    <i class="fas fa-history"></i>
+                    Trip History
+                    <i class="fas fa-chevron-right"></i>
+                  </a>
+                </li>
+                <li class="mobile-nav-item">
+                  <a href="./profile.html" class="mobile-nav-link">
+                    <i class="fas fa-user"></i>
+                    Profile
+                    <i class="fas fa-chevron-right"></i>
+                  </a>
+                </li>
+                <li class="mobile-nav-item">
+                  <a href="./payments.html" class="mobile-nav-link">
+                    <i class="fas fa-credit-card"></i>
+                    Payment Methods
+                    <i class="fas fa-chevron-right"></i>
+                  </a>
+                </li>
+                <li class="mobile-nav-item">
+                  <a href="./settings.html" class="mobile-nav-link">
+                    <i class="fas fa-cog"></i>
+                    Settings
+                    <i class="fas fa-chevron-right"></i>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="mobile-nav-item">
+              <a
+                href="#"
+                class="mobile-nav-link has-submenu"
+                aria-expanded="false"
+                aria-controls="services-submenu"
+              >
+                <i class="fas fa-car"></i>
+                Services
+                <i class="fas fa-chevron-down dropdown-arrow"></i>
+              </a>
+              <ul class="mobile-submenu" id="services-submenu">
+                <li class="mobile-nav-item">
+                  <a href="#" class="mobile-nav-link">
+                    <i class="fas fa-car"></i>
+                    Standard Rides
+                    <i class="fas fa-chevron-right"></i>
+                  </a>
+                </li>
+                <li class="mobile-nav-item">
+                  <a href="#" class="mobile-nav-link">
+                    <i class="fas fa-star"></i>
+                    Premium Rides
+                    <i class="fas fa-chevron-right"></i>
+                  </a>
+                </li>
+                <li class="mobile-nav-item">
+                  <a href="#" class="mobile-nav-link">
+                    <i class="fas fa-plane"></i>
+                    Airport Transfers
+                    <i class="fas fa-chevron-right"></i>
+                  </a>
+                </li>
+                <li class="mobile-nav-item">
+                  <a href="#" class="mobile-nav-link">
+                    <i class="fas fa-route"></i>
+                    Intercity Travel
+                    <i class="fas fa-chevron-right"></i>
+                  </a>
+                </li>
+                <li class="mobile-nav-item">
+                  <a href="#" class="mobile-nav-link">
+                    <i class="fas fa-briefcase"></i>
+                    Business Travel
+                    <i class="fas fa-chevron-right"></i>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="mobile-nav-item">
+              <a
+                href="#"
+                class="mobile-nav-link has-submenu"
+                aria-expanded="false"
+                aria-controls="safety-submenu"
+              >
+                <i class="fas fa-shield-alt"></i>
+                Safety
+                <i class="fas fa-chevron-down dropdown-arrow"></i>
+              </a>
+              <ul class="mobile-submenu" id="safety-submenu">
+                <li class="mobile-nav-item">
+                  <a href="#" class="mobile-nav-link">
+                    <i class="fas fa-shield-alt"></i>
+                    Safety Features
+                    <i class="fas fa-chevron-right"></i>
+                  </a>
+                </li>
+                <li class="mobile-nav-item">
+                  <a href="#" class="mobile-nav-link">
+                    <i class="fas fa-book"></i>
+                    Safety Guidelines
+                    <i class="fas fa-chevron-right"></i>
+                  </a>
+                </li>
+                <li class="mobile-nav-item">
+                  <a href="#" class="mobile-nav-link">
+                    <i class="fas fa-phone-alt"></i>
+                    Emergency Services
+                    <i class="fas fa-chevron-right"></i>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="mobile-nav-item">
+              <a
+                href="#"
+                class="mobile-nav-link has-submenu"
+                aria-expanded="false"
+                aria-controls="help-submenu"
+              >
+                <i class="fas fa-question-circle"></i>
+                Help
+                <i class="fas fa-chevron-down dropdown-arrow"></i>
+              </a>
+              <ul class="mobile-submenu" id="help-submenu">
+                <li class="mobile-nav-item">
+                  <a href="./faq.html" class="mobile-nav-link">
+                    <i class="fas fa-question-circle"></i>
+                    FAQ
+                    <i class="fas fa-chevron-right"></i>
+                  </a>
+                </li>
+                <li class="mobile-nav-item">
+                  <a href="./contact.html" class="mobile-nav-link">
+                    <i class="fas fa-envelope"></i>
+                    Contact Us
+                    <i class="fas fa-chevron-right"></i>
+                  </a>
+                </li>
+                <li class="mobile-nav-item">
+                  <a href="./support.html" class="mobile-nav-link">
+                    <i class="fas fa-headset"></i>
+                    Support
+                    <i class="fas fa-chevron-right"></i>
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <div class="mobile-nav-buttons">
+            <a href="./login.html" class="btn btn-secondary btn-block mb-2"
+              >Log In</a
+            >
+            <a href="./signup.html" class="btn btn-primary btn-block"
+              >Sign Up</a
+            >
+          </div>
+          <div class="mobile-menu-footer">
+            <div class="mobile-social">
+              <a href="#" class="social-link"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+              <a href="#" class="social-link"
+                ><i class="fab fa-instagram"></i
+              ></a>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
-</header>
+    </header>
+  </body>
+</html>

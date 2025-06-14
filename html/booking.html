@@ -116,52 +116,78 @@
             <div class="vehicle-selection">
               <h3 class="section-subtitle">Select Vehicle Type</h3>
               <div class="vehicle-options">
-                <div class="vehicle-option active" data-type="economy">
+                <div class="vehicle-option active" data-type="bike">
                   <div class="vehicle-option-icon">
-                    <img src="../images/vehicle-economy.svg" alt="Economy" />
+                    <img src="../images/bike.jpg" alt="Bike" />
+                  </div>
+                  <div class="vehicle-option-info">
+                    <h4>Bike</h4>
+                    <p>Single rider</p>
+                    <div class="vehicle-option-price" id="bike-fare">
+                      ₹100
+                    </div>
+                  </div>
+                </div>
+
+                <div class="vehicle-option" data-type="green">
+                  <div class="vehicle-option-icon">
+                    <img src="../images/car4.jpg" alt="Green" />
+                  </div>
+                  <div class="vehicle-option-info">
+                    <h4>Green</h4>
+                    <p>Electric vehicle</p>
+                    <div class="vehicle-option-price" id="green-fare">
+                      ₹280
+                    </div>
+                  </div>
+                </div>
+
+                <div class="vehicle-option" data-type="economy">
+                  <div class="vehicle-option-icon">
+                    <img src="../images/car1.jpg" alt="Economy" />
                   </div>
                   <div class="vehicle-option-info">
                     <h4>Economy</h4>
                     <p>Up to 4 people</p>
                     <div class="vehicle-option-price" id="economy-fare">
-                      $10.50
+                      ₹300
                     </div>
                   </div>
                 </div>
 
                 <div class="vehicle-option" data-type="premium">
                   <div class="vehicle-option-icon">
-                    <img src="../images/vehicle-premium.svg" alt="Premium" />
+                    <img src="../images/car2.jpg" alt="Premium" />
                   </div>
                   <div class="vehicle-option-info">
                     <h4>Premium</h4>
                     <p>Up to 4 people</p>
                     <div class="vehicle-option-price" id="premium-fare">
-                      $15.75
+                      ₹350
                     </div>
                   </div>
                 </div>
 
-                <div class="vehicle-option" data-type="xl">
+                <div class="vehicle-option" data-type="suv">
                   <div class="vehicle-option-icon">
-                    <img src="../images/vehicle-xl.svg" alt="XL" />
+                    <img src="../images/car3.jpg" alt="SUV" />
                   </div>
                   <div class="vehicle-option-info">
-                    <h4>XL</h4>
-                    <p>Up to 6 people</p>
-                    <div class="vehicle-option-price" id="xl-fare">$21.00</div>
+                    <h4>SUV</h4>
+                    <p>Up to 5 people</p>
+                    <div class="vehicle-option-price" id="suv-fare">₹400</div>
                   </div>
                 </div>
 
-                <div class="vehicle-option" data-type="green">
+                <div class="vehicle-option" data-type="bus">
                   <div class="vehicle-option-icon">
-                    <img src="../images/vehicle-electric.svg" alt="Green" />
+                    <img src="../images/bus.jpg" alt="Bus" />
                   </div>
                   <div class="vehicle-option-info">
-                    <h4>Green</h4>
-                    <p>Electric vehicle</p>
-                    <div class="vehicle-option-price" id="green-fare">
-                      $12.60
+                    <h4>Bus</h4>
+                    <p>Up to 20 people</p>
+                    <div class="vehicle-option-price" id="bus-fare">
+                      ₹50
                     </div>
                   </div>
                 </div>
@@ -322,11 +348,11 @@
               <div class="fare-breakdown">
                 <div class="fare-item">
                   <span>Base fare</span>
-                  <span id="base-fare">$2.50</span>
+                  <span id="base-fare">₹210</span>
                 </div>
                 <div class="fare-item">
                   <span>Distance</span>
-                  <span id="distance-fare">$8.00</span>
+                  <span id="distance-fare">₹680</span>
                 </div>
                 <div class="fare-item">
                   <span>Surge multiplier</span>
@@ -334,7 +360,7 @@
                 </div>
                 <div class="fare-item total">
                   <span>Total</span>
-                  <span id="total-fare">$10.50</span>
+                  <span id="total-fare">₹890</span>
                 </div>
               </div>
             </div>
@@ -457,6 +483,9 @@
                 <span class="driver-car-plate">ABC 123</span>
               </div>
             </div>
+          </div>
+          <div class="driver-car-image" style="margin: 15px 0; text-align: center;">
+            <img src="../images/car5.jpg" alt="Driver's Car" style="max-width: 100%; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);" />
           </div>
           <div class="confirmation-details">
             <div class="confirmation-item">

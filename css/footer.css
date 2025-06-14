@@ -61,6 +61,8 @@
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   gap: var(--space-xl);
+  margin-top: var(--space-xl);
+  padding: 0 var(--space-md);
 }
 
 @media (min-width: 576px) {
@@ -71,8 +73,13 @@
 
 @media (min-width: 992px) {
   .footer-content {
-    grid-template-columns: 2fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-xxl);
   }
+}
+
+.footer-column {
+  text-align: left;
 }
 
 .footer-logo {
@@ -180,13 +187,10 @@
 }
 
 .footer-heading {
-  font-size: var(--text-heading-sm);
+  font-size: 1.5rem;
   font-weight: var(--font-weight-bold);
-  margin-bottom: var(--space-lg);
   color: var(--text-primary);
-  position: relative;
-  display: inline-block;
-  padding-bottom: 12px;
+  margin-bottom: var(--space-lg);
 }
 
 .footer-heading::after {
@@ -208,36 +212,19 @@
 
 .footer-links li {
   margin-bottom: var(--space-md);
-  position: relative;
 }
 
-.footer-links li a {
+.footer-links a {
   color: var(--text-secondary);
   text-decoration: none;
-  transition: all 0.3s ease;
-  display: inline-block;
-  padding-left: 0;
-  font-weight: var(--font-weight-medium);
+  font-size: 1.1rem;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
 }
 
-.footer-links li a::before {
-  content: '›';
-  position: absolute;
-  left: -15px;
-  opacity: 0;
-  color: var(--primary-blue);
-  font-size: 1.2em;
-  transition: all 0.3s ease;
-}
-
-.footer-links li a:hover {
-  color: var(--primary-blue);
-  padding-left: 20px;
-}
-
-.footer-links li a:hover::before {
+.footer-links a:hover {
   opacity: 1;
-  left: 0;
+  color: var(--text-primary);
 }
 
 .footer-newsletter {
@@ -450,6 +437,7 @@
 @media (min-width: 576px) {
   .footer-app-buttons {
     flex-direction: row;
+    flex-wrap: wrap;
   }
 }
 

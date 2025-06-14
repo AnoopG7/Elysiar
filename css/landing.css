@@ -74,6 +74,12 @@
   position: relative;
   z-index: 2;
   animation: fadeInUp 0.8s ease-out;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-xl) 0;
 }
 
 .hero-title {
@@ -84,6 +90,7 @@
   animation: slideInLeft 0.6s ease-out;
   opacity: 0;
   animation-fill-mode: forwards;
+  text-align: center;
 }
 
 .hero-subtitle {
@@ -93,11 +100,16 @@
   opacity: 0;
   animation: slideInLeft 0.6s ease-out 0.2s;
   animation-fill-mode: forwards;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .hero-buttons {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-md);
   gap: var(--space-md);
   margin-bottom: var(--space-lg);
   opacity: 0;
@@ -168,8 +180,10 @@
 }
 
 .how-it-works-section {
-  padding: var(--space-xxl) 0;
+  padding: 20px 0 60px;
   background-color: var(--background-primary);
+  position: relative;
+  overflow: hidden;
 }
 
 .steps-container {
@@ -334,6 +348,13 @@
   background-color: var(--background-secondary);
 }
 
+.features-section {
+  padding: 60px 0;
+  background-color: var(--background-primary);
+  position: relative;
+  overflow: hidden;
+}
+
 .features-grid {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
@@ -456,16 +477,22 @@
 }
 
 .vehicle-image {
-  height: 120px;
+  height: 180px; /* Increased height */
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: var(--space-md);
+  /* background-color: #121724; Dark background
+  border-radius: 12px; */
 }
 
 .vehicle-image img {
   max-height: 100%;
-  width: auto;
+  max-width: 100%;
+  /* width: auto;
+  height: auto;
+  object-fit: contain; /* Prevent stretching */
+  padding: 10px; */
 }
 
 .vehicle-card h3 {
@@ -1003,9 +1030,8 @@
 
 /* CTA Section */
 .cta-section {
-  padding: var(--space-xxl) 0;
+  padding: 0 0 var(--space-xxl) 0;
   text-align: center;
-  margin: var(--space-xxl) 0;
   position: relative;
   overflow: hidden;
 }

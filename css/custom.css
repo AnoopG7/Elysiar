@@ -101,16 +101,27 @@
 .vehicle-image {
     margin-bottom: 1.5rem;
     position: relative;
-}
+    height: 200px; 
+    display: flex;
+    
+    /* align-items: center;
+    justify-content: center;
+    background-color: #121724; Dark background for contrast 
+    border-radius: 12px; */
+} 
 
 .vehicle-image img {
-    width: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
     height: auto;
-    border-radius: 12px;
+    object-fit: contain; /* Prevent stretching */
+    /* padding: 10px; Add padding around images*/
+    border-radius: 20px; 
 }
 
 .vehicle-info h3 {
-    font-size: 1.25rem;
+    font-size: 1.25rem; 
     font-weight: 600;
     margin-bottom: 0.5rem;
     color: var(--text-primary);

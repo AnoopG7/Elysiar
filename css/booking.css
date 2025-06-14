@@ -335,7 +335,6 @@
   background-color: rgba(26, 115, 232, 0.05);
   border-radius: var(--radius-lg);
   transition: all var(--transition-standard);
-  padding: var(--space-sm);
   margin-bottom: var(--space-sm);
 }
 
@@ -353,6 +352,7 @@
   max-height: 100%;
   transition: transform var(--transition-standard);
   filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+  border-radius: var(--radius-lg);
 }
 
 .vehicle-option:hover .vehicle-option-icon img {

@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="../css/header.css" />
     <link rel="stylesheet" href="../css/footer.css" />
     <link rel="stylesheet" href="../css/landing.css" />
+    <link rel="stylesheet" href="../css/vehicle-gallery.css" />
 
     <link rel="stylesheet" href="../css/custom.css" />
 
@@ -59,9 +60,68 @@
               >
             </div>
           </div>
-          <div class="hero-image">
-            <img src="../images/hero-car.svg" alt="Elysiar Car Illustration" />
-            <div class="hero-blob"></div>
+        </div>
+      </section>
+
+      <!-- Vehicle Gallery Section -->
+      <section class="vehicle-gallery-section">
+        <div class="container">
+          <div class="section-header">
+            <h2 class="section-title">Our Fleet Gallery</h2>
+            <p class="section-subtitle">
+              Explore our premium selection of vehicles
+            </p>
+          </div>
+
+          <div class="vehicle-gallery">
+            <div class="gallery-item">
+              <img
+                src="../images/car6.jpg"
+                alt="Luxury Sedan"
+                class="gallery-img"
+              />
+              <div class="gallery-overlay">
+                <h3>Luxury Sedan</h3>
+                <a href="./booking.html" class="btn btn-outline btn-sm"
+                  >Book Now</a
+                >
+              </div>
+            </div>
+            <div class="gallery-item">
+              <img src="../images/car7.jpg" alt="SUV" class="gallery-img" />
+              <div class="gallery-overlay">
+                <h3>Premium SUV</h3>
+                <a href="./booking.html" class="btn btn-outline btn-sm"
+                  >Book Now</a
+                >
+              </div>
+            </div>
+            <div class="gallery-item">
+              <img
+                src="../images/car8.jpg"
+                alt="Electric Car"
+                class="gallery-img"
+              />
+              <div class="gallery-overlay">
+                <h3>Electric Vehicle</h3>
+                <a href="./booking.html" class="btn btn-outline btn-sm"
+                  >Book Now</a
+                >
+              </div>
+            </div>
+            <div class="gallery-item">
+              <img
+                src="../images/car9.jpg"
+                alt="Premium Sedan"
+                class="gallery-img"
+              />
+              <div class="gallery-overlay">
+                <h3>Premium Sedans</h3>
+                <a href="./booking.html" class="btn btn-outline btn-sm"
+                  >Book Now</a
+                >
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -123,10 +183,33 @@
           <div class="vehicle-grid">
             <div class="vehicle-card">
               <div class="vehicle-image">
-                <img
-                  src="../images/vehicle-economy.svg"
-                  alt="Economy Vehicle"
-                />
+                <img src="../images/bike.jpg" alt="Bike" />
+              </div>
+              <div class="vehicle-info">
+                <h3 class="vehicle-title">Bike</h3>
+                <p class="vehicle-description">
+                  Quick and eco-friendly option for solo travelers.
+                </p>
+                <div class="vehicle-features">
+                  <span class="vehicle-feature">
+                    <i class="fas fa-user"></i> 1
+                  </span>
+                  <span class="vehicle-feature">
+                    <i class="fas fa-bicycle"></i> Quick
+                  </span>
+                  <span class="vehicle-feature">
+                    <i class="fas fa-leaf"></i> Eco
+                  </span>
+                </div>
+                <a href="./booking.html" class="btn btn-outline btn-sm"
+                  >Book Now</a
+                >
+              </div>
+            </div>
+
+            <div class="vehicle-card">
+              <div class="vehicle-image">
+                <img src="../images/car1.jpg" alt="Economy Vehicle" />
               </div>
               <div class="vehicle-info">
                 <h3 class="vehicle-title">Economy</h3>
@@ -152,10 +235,7 @@
 
             <div class="vehicle-card">
               <div class="vehicle-image">
-                <img
-                  src="../images/vehicle-premium.svg"
-                  alt="Premium Vehicle"
-                />
+                <img src="../images/car2.jpg" alt="Premium Vehicle" />
               </div>
               <div class="vehicle-info">
                 <h3 class="vehicle-title">Premium</h3>
@@ -181,12 +261,12 @@
 
             <div class="vehicle-card">
               <div class="vehicle-image">
-                <img src="../images/vehicle-xl.svg" alt="XL Vehicle" />
+                <img src="../images/car3.jpg" alt="SUV Vehicle" />
               </div>
               <div class="vehicle-info">
-                <h3 class="vehicle-title">XL</h3>
+                <h3 class="vehicle-title">SUV</h3>
                 <p class="vehicle-description">
-                  Spacious SUVs for larger groups. Up to 6 passengers.
+                  Spacious SUVs for larger groups. Up to 5 passengers.
                 </p>
                 <div class="vehicle-features">
                   <span class="vehicle-feature">
@@ -207,10 +287,7 @@
 
             <div class="vehicle-card">
               <div class="vehicle-image">
-                <img
-                  src="../images/vehicle-electric.svg"
-                  alt="Electric Vehicle"
-                />
+                <img src="../images/car4.jpg" alt="Electric Vehicle" />
               </div>
               <div class="vehicle-info">
                 <h3 class="vehicle-title">Green</h3>
@@ -226,6 +303,32 @@
                   </span>
                   <span class="vehicle-feature">
                     <i class="fas fa-leaf"></i> Eco
+                  </span>
+                </div>
+                <a href="./booking.html" class="btn btn-outline btn-sm"
+                  >Book Now</a
+                >
+              </div>
+            </div>
+
+            <div class="vehicle-card">
+              <div class="vehicle-image">
+                <img src="../images/bus.jpg" alt="Bus" />
+              </div>
+              <div class="vehicle-info">
+                <h3 class="vehicle-title">Bus</h3>
+                <p class="vehicle-description">
+                  Perfect for large groups and events. Up to 20 passengers.
+                </p>
+                <div class="vehicle-features">
+                  <span class="vehicle-feature">
+                    <i class="fas fa-users"></i> 20
+                  </span>
+                  <span class="vehicle-feature">
+                    <i class="fas fa-suitcase"></i> 10+
+                  </span>
+                  <span class="vehicle-feature">
+                    <i class="fas fa-bus"></i> Groups
                   </span>
                 </div>
                 <a href="./booking.html" class="btn btn-outline btn-sm"
@@ -333,7 +436,6 @@
         </div>
       </section>
 
-
       <!-- Testimonials Section -->
       <section
         class="testimonials-section"
@@ -355,10 +457,13 @@
             role="region"
             aria-label="Customer testimonials"
           >
-            <button class="carousel-arrow prev" aria-label="Previous testimonial">
+            <button
+              class="carousel-arrow prev"
+              aria-label="Previous testimonial"
+            >
               <i class="fas fa-chevron-left"></i>
             </button>
-            
+
             <div class="testimonials-track">
               <!-- Testimonial 1 -->
               <div class="testimonial-card">
@@ -371,15 +476,19 @@
                 </div>
                 <div class="testimonial-text">
                   <p>
-                    "Elysiar has transformed my daily commute! The app is incredibly intuitive, 
-                    and the real-time tracking feature gives me peace of mind. The drivers are 
-                    consistently professional and courteous. It's refreshing to have such a 
+                    "Elysiar has transformed my daily commute! The app is
+                    incredibly intuitive, and the real-time tracking feature
+                    gives me peace of mind. The drivers are consistently
+                    professional and courteous. It's refreshing to have such a
                     reliable service."
                   </p>
                 </div>
                 <div class="testimonial-author">
                   <div class="author-image">
-                    <img src="../images/testimonial-1.jpg" alt="Sarah Johnson" />
+                    <img
+                      src="../images/testimonial-1.jpg"
+                      alt="Sarah Johnson"
+                    />
                   </div>
                   <div class="author-info">
                     <h4 class="author-name">Sarah Johnson</h4>
@@ -399,15 +508,19 @@
                 </div>
                 <div class="testimonial-text">
                   <p>
-                    "As a frequent business traveler, I rely heavily on ride-hailing services. 
-                    Elysiar stands out with its premium fleet and exceptional service. The fixed 
-                    pricing and detailed receipts make expense reporting a breeze. Absolutely 
-                    worth every penny!"
+                    "As a frequent business traveler, I rely heavily on
+                    ride-hailing services. Elysiar stands out with its premium
+                    fleet and exceptional service. The fixed pricing and
+                    detailed receipts make expense reporting a breeze.
+                    Absolutely worth every penny!"
                   </p>
                 </div>
                 <div class="testimonial-author">
                   <div class="author-image">
-                    <img src="../images/testimonial-2.jpg" alt="Michael Rodriguez" />
+                    <img
+                      src="../images/testimonial-2.jpg"
+                      alt="Michael Rodriguez"
+                    />
                   </div>
                   <div class="author-info">
                     <h4 class="author-name">Michael Rodriguez</h4>
@@ -427,10 +540,10 @@
                 </div>
                 <div class="testimonial-text">
                   <p>
-                    "The eco-friendly options at Elysiar align perfectly with my values. 
-                    I love that I can choose electric vehicles and contribute to reducing 
-                    my carbon footprint. The drivers are knowledgeable about sustainable 
-                    practices too!"
+                    "The eco-friendly options at Elysiar align perfectly with my
+                    values. I love that I can choose electric vehicles and
+                    contribute to reducing my carbon footprint. The drivers are
+                    knowledgeable about sustainable practices too!"
                   </p>
                 </div>
                 <div class="testimonial-author">
@@ -455,15 +568,18 @@
                 </div>
                 <div class="testimonial-text">
                   <p>
-                    "Safety was my top concern when choosing a ride-hailing service. 
-                    Elysiar's comprehensive safety features, including live tracking 
-                    and emergency assistance, give me complete confidence. Their 24/7 
-                    support is incredibly responsive!"
+                    "Safety was my top concern when choosing a ride-hailing
+                    service. Elysiar's comprehensive safety features, including
+                    live tracking and emergency assistance, give me complete
+                    confidence. Their 24/7 support is incredibly responsive!"
                   </p>
                 </div>
                 <div class="testimonial-author">
                   <div class="author-image">
-                    <img src="../images/testimonial-1.jpg" alt="Alexandra Torres" />
+                    <img
+                      src="../images/testimonial-1.jpg"
+                      alt="Alexandra Torres"
+                    />
                   </div>
                   <div class="author-info">
                     <h4 class="author-name">Alexandra Torres</h4>

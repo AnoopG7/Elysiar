@@ -30,6 +30,8 @@
 
     <!-- JavaScript Files -->
     <script src="../js/navbar.js"></script>
+    <script src="../js/include-navbar.js"></script>
+    <script src="../js/footer.js"></script>
     <script src="../js/update_css.js"></script>
     <link rel="stylesheet" href="../css/dark-theme.css" />
   </head>
@@ -61,8 +63,8 @@
               <i class="fas fa-dollar-sign"></i>
             </div>
             <h3>Total Spent</h3>
-            <div class="stat-value" id="total-spent">$537.50</div>
-            <div class="stat-change">$45.75 this month</div>
+            <div class="stat-value" id="total-spent">₹20,305</div>
+            <div class="stat-change">₹3,752 this month</div>
           </div>
 
           <div class="stat-card">
@@ -143,7 +145,7 @@
                 >
               </div>
               <div class="activity-meta">
-                <div class="activity-price">$35.50</div>
+                <div class="activity-price">₹280</div>
                 <div class="activity-time">May 25, 2025 at 2:30 PM</div>
               </div>
             </div>
@@ -181,7 +183,7 @@
                 >
               </div>
               <div class="activity-meta">
-                <div class="activity-price">$32.75</div>
+                <div class="activity-price">₹300</div>
                 <div class="activity-time">May 20, 2025 at 9:15 AM</div>
               </div>
             </div>
@@ -218,52 +220,6 @@
       </div>
     </main>
 
-    <!-- Bottom Navigation for Mobile -->
-    <nav class="bottom-nav">
-      <ul class="bottom-nav-list">
-        <li class="bottom-nav-item">
-          <a href="index.html" class="bottom-nav-link">
-            <i class="fas fa-home bottom-nav-icon"></i>
-            <span>Home</span>
-          </a>
-        </li>
-        <li class="bottom-nav-item">
-          <a href="booking.html" class="bottom-nav-link">
-            <i class="fas fa-car bottom-nav-icon"></i>
-            <span>Ride</span>
-          </a>
-        </li>
-        <li class="bottom-nav-item">
-          <a href="dashboard.html" class="bottom-nav-link active">
-            <i class="fas fa-tachometer-alt bottom-nav-icon"></i>
-            <span>Dashboard</span>
-          </a>
-        </li>
-        <li class="bottom-nav-item">
-          <a href="profile.html" class="bottom-nav-link">
-            <i class="fas fa-user bottom-nav-icon"></i>
-            <span>Profile</span>
-          </a>
-        </li>
-      </ul>
-    </nav>
-
-    <!-- Footer -->
-    <footer class="footer">
-      <div class="container">
-        <div class="footer-bottom">
-          <div class="footer-copyright">
-            &copy; 2025 Elysiar. All rights reserved.
-          </div>
-          <div class="footer-legal">
-            <a href="#" class="footer-legal-link">Privacy</a>
-            <a href="#" class="footer-legal-link">Terms</a>
-            <a href="#" class="footer-legal-link">Cookies</a>
-            <a href="#" class="footer-legal-link">Help</a>
-          </div>
-        </div>
-      </div>
-    </footer>
 
     <!-- JavaScript Files -->
     <script src="../js/main.js"></script>
@@ -372,5 +328,10 @@
       });
     </script>
     <script src="../js/dark-theme.js"></script>
+
+    <!-- Footer -->
+    <footer class="footer" id="footer">
+      <!-- Footer content will be loaded by JavaScript -->
+    </footer>
   </body>
 </html>

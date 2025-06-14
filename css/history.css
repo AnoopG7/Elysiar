@@ -1,8 +1,9 @@
 /* Trip History Styles */
 .history-page {
-    background: var(--bg-gradient);
+    background: none;
     color: var(--text-primary);
     min-height: 100vh;
+    padding-top: var(--header-height);
 }
 
 .main-content {
@@ -16,7 +17,7 @@
 }
 
 .page-header h1 {
-    font-size: var(--text-heading-xl);
+    font-size: var(--text-display-lg);
     margin-bottom: var(--space-xs);
     background: var(--text-gradient);
     -webkit-background-clip: text;

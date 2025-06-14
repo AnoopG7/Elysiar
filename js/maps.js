@@ -230,6 +230,7 @@ function updateRouteInfo(route) {
         <div class="route-step-content">
           <div class="route-step-instruction">${step.instructions}</div>
           <div class="route-step-distance">${step.distance.text}</div>
+          ${step.fare ? `<div class="route-step-fare">₹${(step.fare * 82).toFixed(2)}</div>` : ''}
         </div>
       `;
       
@@ -246,12 +247,12 @@ function updateFareEstimate(distanceInMeters) {
   // Convert meters to kilometers
   const distanceInKm = distanceInMeters / 1000;
   
-  // Basic fare calculation (this is a simplified example)
-  const baseFare = 2.5;
-  const perKmRate = 1.5;
+  // Basic fare calculation (in INR)
+  const baseFare = 210;  // Base fare in rupees
+  const perKmRate = 15; // Per km rate in rupees
   const fare = baseFare + (distanceInKm * perKmRate);
   
-  // Apply surge pricing if it's rush hour (simplified example)
+  // Apply surge pricing if it's rush hour
   const now = new Date();
   const hour = now.getHours();
   let surgeMultiplier = 1;
@@ -260,13 +261,13 @@ function updateFareEstimate(distanceInMeters) {
     surgeMultiplier = 1.5;
   }
   
-  const finalFare = fare * surgeMultiplier;
+  const finalFare = Math.round(fare * surgeMultiplier);
   
   // Update fare estimate elements
-  document.getElementById('base-fare')?.textContent = `$${baseFare.toFixed(2)}`;
-  document.getElementById('distance-fare')?.textContent = `$${(distanceInKm * perKmRate).toFixed(2)}`;
+  document.getElementById('base-fare')?.textContent = `₹${baseFare}`;
+  document.getElementById('distance-fare')?.textContent = `₹${Math.round(distanceInKm * perKmRate)}`;
   document.getElementById('surge-multiplier')?.textContent = `${surgeMultiplier}x`;
-  document.getElementById('total-fare')?.textContent = `$${finalFare.toFixed(2)}`;
+  document.getElementById('total-fare')?.textContent = `₹${finalFare}`;
   
   // Update fare for different vehicle types
   updateVehicleTypeFares(finalFare);
@@ -275,14 +276,16 @@ function updateFareEstimate(distanceInMeters) {
 // Update fares for different vehicle types
 function updateVehicleTypeFares(baseFare) {
   const economyFare = baseFare;
-  const premiumFare = baseFare * 1.5;
-  const xlFare = baseFare * 2;
-  const greenFare = baseFare * 1.2;
+  const premiumFare = Math.round(baseFare * 1.5);
+  const suvFare = Math.round(baseFare * 2);
+  const greenFare = Math.round(baseFare * 1.2);
+  const bikeFare = Math.round(baseFare * 0.6);
   
-  document.getElementById('economy-fare')?.textContent = `$${economyFare.toFixed(2)}`;
-  document.getElementById('premium-fare')?.textContent = `$${premiumFare.toFixed(2)}`;
-  document.getElementById('xl-fare')?.textContent = `$${xlFare.toFixed(2)}`;
-  document.getElementById('green-fare')?.textContent = `$${greenFare.toFixed(2)}`;
+  document.getElementById('economy-fare')?.textContent = `₹${economyFare}`;
+  document.getElementById('premium-fare')?.textContent = `₹${premiumFare}`;
+  document.getElementById('suv-fare')?.textContent = `₹${suvFare}`;
+  document.getElementById('green-fare')?.textContent = `₹${greenFare}`;
+  document.getElementById('bike-fare')?.textContent = `₹${bikeFare}`;
 }
 
 // Initialize driver tracking simulation
