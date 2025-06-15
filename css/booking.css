@@ -695,6 +695,80 @@
   cursor: pointer;
 }
 
+/* Loyalty Points */
+.loyalty-points {
+  margin-bottom: var(--space-lg);
+  padding: var(--space-md);
+  background-color: var(--surface-color-secondary);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-color);
+}
+
+.loyalty-points-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-md);
+  flex-wrap: wrap;
+}
+
+.loyalty-points-title {
+  font-size: var(--text-body-md);
+  margin-right: var(--space-xs);
+}
+
+.loyalty-points-value {
+  font-weight: 700;
+  color: var(--primary-blue);
+  font-size: var(--text-body-md);
+}
+
+.loyalty-points-worth {
+  font-size: var(--text-body-sm);
+  color: var(--text-secondary);
+}
+
+.loyalty-points-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--surface-color);
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+  font-size: var(--text-body-md);
+  cursor: pointer;
+  padding: var(--space-sm) var(--space-md);
+  border-radius: var(--radius-md);
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+.loyalty-points-toggle i {
+  margin-right: var(--space-xs);
+  color: var(--primary-blue);
+}
+
+.loyalty-points-toggle.active {
+  background-color: var(--primary-blue);
+  color: var(--white);
+  border-color: var(--primary-blue);
+}
+
+.loyalty-points-toggle.active i {
+  color: var(--white);
+}
+
+@media (max-width: 575.98px) {
+  .loyalty-points-info {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .loyalty-points-worth {
+    margin-top: var(--space-xs);
+  }
+}
+
 /* Fare Estimate */
 .fare-estimate {
   margin-bottom: var(--space-lg);
@@ -991,5 +1065,62 @@
     font-size: var(--text-body-lg);
     padding: var(--space-xs) var(--space-md);
     margin-top: var(--space-sm);
+  }
+}
+
+/* Notification styles */
+.notification-container {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.notification {
+  padding: var(--space-md);
+  border-radius: var(--radius-md);
+  color: var(--white);
+  box-shadow: var(--shadow-md);
+  min-width: 280px;
+  max-width: 400px;
+  opacity: 1;
+  transform: translateX(0);
+  transition: all 0.3s ease;
+}
+
+.notification.hide {
+  opacity: 0;
+  transform: translateX(100%);
+}
+
+.notification-success {
+  background-color: var(--success-color, #4CAF50);
+}
+
+.notification-error {
+  background-color: var(--error-color, #F44336);
+}
+
+.notification-info {
+  background-color: var(--primary-blue, #2196F3);
+}
+
+.notification-warning {
+  background-color: var(--warning-color, #FF9800);
+}
+
+@media (max-width: 575.98px) {
+  .notification-container {
+    left: 20px;
+    right: 20px;
+  }
+  
+  .notification {
+    min-width: auto;
+    max-width: none;
+    width: 100%;
   }
 }

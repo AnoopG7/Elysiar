@@ -14,6 +14,7 @@ function initBookingPage() {
   setupSavedLocations();
   setupPaymentOptions();
   setupVehicleSelection();
+  setupLoyaltyPointsToggle(); // Add this line
   setupBookingButton();
   setupModalFunctionality();
   
@@ -247,6 +248,74 @@ function setupVehicleSelection() {
       }
     });
   });
+}
+
+// Setup loyalty points toggle functionality
+function setupLoyaltyPointsToggle() {
+  const loyaltyPointsToggle = document.getElementById('loyalty-points-toggle');
+  
+  if (loyaltyPointsToggle) {
+    loyaltyPointsToggle.addEventListener('click', () => {
+      // Toggle active class
+      loyaltyPointsToggle.classList.toggle('active');
+      
+      // Change text based on active state
+      const buttonText = loyaltyPointsToggle.querySelector('span');
+      if (loyaltyPointsToggle.classList.contains('active')) {
+        buttonText.textContent = 'Loyalty Points Applied';
+        
+        // Apply the loyalty points discount to the fare
+        applyLoyaltyPointsDiscount();
+      } else {
+        buttonText.textContent = 'Apply Loyalty Points';
+        
+        // Remove the loyalty points discount
+        removeLoyaltyPointsDiscount();
+      }
+    });
+  }
+}
+
+// Apply loyalty points discount to the fare
+function applyLoyaltyPointsDiscount() {
+  // Get the current total fare
+  const totalFareElement = document.getElementById('total-fare');
+  if (totalFareElement) {
+    // Extract the numeric value from the total fare (removing the ₹ symbol)
+    const currentFare = parseInt(totalFareElement.textContent.replace('₹', '').trim());
+    
+    // Calculate discount (half of the loyalty points value, which is 350 points = ₹175)
+    const loyaltyDiscount = 240;
+    
+    // Calculate new fare (ensuring it doesn't go below 0)
+    const newFare = Math.max(currentFare - loyaltyDiscount, 0);
+    
+    // Update the displayed fare
+    totalFareElement.textContent = `₹${newFare}`;
+    
+    // Show a confirmation message (optional)
+    showNotification('Loyalty points applied: ₹175 discount!', 'success');
+  }
+}
+
+// Remove loyalty points discount from the fare
+function removeLoyaltyPointsDiscount() {
+  // Get the current total fare
+  const totalFareElement = document.getElementById('total-fare');
+  if (totalFareElement) {
+    // Extract the numeric value from the total fare (removing the ₹ symbol)
+    const currentFare = parseInt(totalFareElement.textContent.replace('₹', '').trim());
+    
+    // Add back the loyalty discount
+    const loyaltyDiscount = 240;
+    const originalFare = currentFare + loyaltyDiscount;
+    
+    // Update the displayed fare
+    totalFareElement.textContent = `₹${originalFare}`;
+    
+    // Show a confirmation message (optional)
+    showNotification('Loyalty points removed', 'info');
+  }
 }
 
 // Setup booking button functionality
