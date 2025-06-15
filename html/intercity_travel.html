@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="../css/preload-dark.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Intercity Travel - Elysiar</title>
+    <meta
+      name="description"
+      content="Book your intercity travel with Elysiar. Comfortable, reliable, and affordable travel between cities."
+    />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../images/favicon.png" />
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="../css/base.css" />
+    <link rel="stylesheet" href="../css/components.css" />
+    <link rel="stylesheet" href="../css/header.css" />
+    <link rel="stylesheet" href="../css/footer.css" />
+    <link rel="stylesheet" href="../css/maps.css" />
+    <link rel="stylesheet" href="../css/booking.css" />
+    <link rel="stylesheet" href="../css/profile-dropdown.css" />
+    <link rel="stylesheet" href="../css/custom.css" />
+    <link rel="stylesheet" href="../css/ride-types.css" />
+
+    <!-- Font Awesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+
+    <!-- JavaScript Files -->
+    <script src="../js/footer.js"></script>
+    <script src="../js/navbar.js"></script>
+    <script src="../js/update_css.js"></script>
+    <link rel="stylesheet" href="../css/dark-theme.css" />
+  </head>
+  <body class="booking-page intercity-travel-page">
+    <header class="header" id="header"></header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <div class="booking-container">
+        <!-- Booking Form Panel -->
+        <div class="booking-panel">
+          <div class="booking-panel-inner">
+            <div class="intercity-badge">
+              <i class="fas fa-route"></i>
+              <span>Intercity</span>
+            </div>
+
+            <h1 class="booking-title">Intercity Travel</h1>
+            <p class="intercity-description">
+              Comfortable and reliable travel between cities. Fixed rates, experienced drivers, and door-to-door service.
+            </p>
+
+            <!-- Trip Type Selection -->
+            <div class="trip-type-selection">
+              <h3 class="section-subtitle">Trip Type</h3>
+              <div class="trip-type-options">
+                <label class="trip-type-option active">
+                  <input type="radio" name="trip-type" value="one-way" checked />
+                  <span class="trip-type-label">
+                    <i class="fas fa-long-arrow-alt-right"></i>
+                    One Way
+                  </span>
+                </label>
+                <label class="trip-type-option">
+                  <input type="radio" name="trip-type" value="round-trip" />
+                  <span class="trip-type-label">
+                    <i class="fas fa-exchange-alt"></i>
+                    Round Trip
+                  </span>
+                </label>
+                <label class="trip-type-option">
+                  <input type="radio" name="trip-type" value="multi-city" />
+                  <span class="trip-type-label">
+                    <i class="fas fa-map-marked-alt"></i>
+                    Multi-City
+                  </span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Location Inputs -->
+            <div class="location-inputs">
+              <div class="location-input-container">
+                <i class="fas fa-city location-input-icon pickup-icon"></i>
+                <input
+                  type="text"
+                  id="origin-city"
+                  class="location-input"
+                  placeholder="Origin City"
+                  required
+                />
+                <button
+                  type="button"
+                  class="current-location-button"
+                  id="current-location-btn"
+                >
+                  <i class="fas fa-location-arrow"></i>
+                </button>
+              </div>
+
+              <div class="location-input-container">
+                <i
+                  class="fas fa-city location-input-icon destination-icon"
+                ></i>
+                <input
+                  type="text"
+                  id="destination-city"
+                  class="location-input"
+                  placeholder="Destination City"
+                  required
+                />
+              </div>
+            </div>
+
+            <!-- Specific Address Inputs -->
+            <div class="specific-addresses">
+              <h3 class="section-subtitle">Pickup & Drop-off Details</h3>
+              <div class="location-input-container">
+                <i class="fas fa-map-marker-alt location-input-icon"></i>
+                <input
+                  type="text"
+                  id="pickup-address"
+                  class="location-input"
+                  placeholder="Specific pickup address"
+                  required
+                />
+              </div>
+              <div class="location-input-container">
+                <i class="fas fa-map-marker-alt location-input-icon"></i>
+                <input
+                  type="text"
+                  id="dropoff-address"
+                  class="location-input"
+                  placeholder="Specific drop-off address"
+                  required
+                />
+              </div>
+            </div>
+
+            <!-- Date & Time Selection -->
+            <div class="date-time-selection">
+              <h3 class="section-subtitle">Journey Details</h3>
+              <div class="date-time-grid">
+                <div class="date-time-input">
+                  <label for="departure-date">Departure Date</label>
+                  <input type="date" id="departure-date" required />
+                </div>
+                <div class="date-time-input">
+                  <label for="departure-time">Departure Time</label>
+                  <input type="time" id="departure-time" required />
+                </div>
+                <div class="date-time-input return-date-container">
+                  <label for="return-date">Return Date</label>
+                  <input type="date" id="return-date" disabled />
+                </div>
+                <div class="date-time-input return-time-container">
+                  <label for="return-time">Return Time</label>
+                  <input type="time" id="return-time" disabled />
+                </div>
+              </div>
+              <p class="journey-note">
+                <i class="fas fa-info-circle"></i>
+                We recommend booking at least 24 hours in advance for intercity travel.
+              </p>
+            </div>
+
+            <!-- Vehicle Selection -->
+            <div class="vehicle-selection">
+              <h3 class="section-subtitle">Select Vehicle</h3>
+              <div class="vehicle-options">
+                <div class="vehicle-option active" data-type="sedan">
+                  <div class="vehicle-option-icon">
+                    <img src="../images/car1.jpg" alt="Sedan" />
+                  </div>
+                  <div class="vehicle-option-info">
+                    <h4>Sedan</h4>
+                    <p>Up to 4 people, 2 suitcases</p>
+                    <div class="vehicle-option-price" id="sedan-fare">
+                      ₹12/km
+                    </div>
+                  </div>
+                </div>
+
+                <div class="vehicle-option" data-type="suv">
+                  <div class="vehicle-option-icon">
+                    <img src="../images/car3.jpg" alt="SUV" />
+                  </div>
+                  <div class="vehicle-option-info">
+                    <h4>SUV</h4>
+                    <p>Up to 6 people, 4 suitcases</p>
+                    <div class="vehicle-option-price" id="suv-fare">
+                      ₹15/km
+                    </div>
+                  </div>
+                </div>
+
+                <div class="vehicle-option" data-type="premium">
+                  <div class="vehicle-option-icon">
+                    <img src="../images/car2.jpg" alt="Premium" />
+                  </div>
+                  <div class="vehicle-option-info">
+                    <h4>Premium</h4>
+                    <p>Luxury travel for up to 4 people</p>
+                    <div class="vehicle-option-price" id="premium-fare">₹18/km</div>
+                  </div>
+                </div>
+
+                <div class="vehicle-option" data-type="tempo-traveller">
+                  <div class="vehicle-option-icon">
+                    <img src="../images/bus.jpg" alt="Tempo Traveller" />
+                  </div>
+                  <div class="vehicle-option-info">
+                    <h4>Tempo Traveller</h4>
+                    <p>Up to 12 people, group travel</p>
+                    <div class="vehicle-option-price" id="tempo-fare">₹25/km</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Additional Services -->
+            <div class="additional-services">
+              <h3 class="section-subtitle">Additional Services</h3>
+              <div class="services-options">
+                <label class="service-checkbox">
+                  <input type="checkbox" name="services" value="rest-stops" />
+                  <span>Rest Stops (+₹500)</span>
+                  <div class="service-tooltip">
+                    Planned rest stops during the journey
+                  </div>
+                </label>
+                <label class="service-checkbox">
+                  <input type="checkbox" name="services" value="wifi" />
+                  <span>WiFi Onboard (+₹200)</span>
+                  <div class="service-tooltip">
+                    4G WiFi available during your journey
+                  </div>
+                </label>
+                <label class="service-checkbox">
+                  <input type="checkbox" name="services" value="child-seat" />
+                  <span>Child Seat (+₹100)</span>
+                  <div class="service-tooltip">
+                    Appropriate child seat for your child's age
+                  </div>
+                </label>
+                <label class="service-checkbox">
+                  <input type="checkbox" name="services" value="refreshments" />
+                  <span>Refreshments (+₹300)</span>
+                  <div class="service-tooltip">
+                    Water bottles and snacks provided
+                  </div>
+                </label>
+                <label class="service-checkbox">
+                  <input type="checkbox" name="services" value="extra-luggage" />
+                  <span>Extra Luggage Space (+₹200)</span>
+                  <div class="service-tooltip">
+                    Additional space for oversized luggage
+                  </div>
+                </label>
+              </div>
+            </div>
+
+            <!-- Number of Passengers -->
+            <div class="passenger-count">
+              <h3 class="section-subtitle">Number of Passengers</h3>
+              <div class="passenger-select-container">
+                <button class="passenger-btn decrease" id="decrease-passengers">
+                  <i class="fas fa-minus"></i>
+                </button>
+                <div class="passenger-count-display">
+                  <span id="passenger-count-value">2</span>
+                  <span class="passenger-label">Passengers</span>
+                </div>
+                <button class="passenger-btn increase" id="increase-passengers">
+                  <i class="fas fa-plus"></i>
+                </button>
+              </div>
+            </div>
+
+            <!-- Payment Method -->
+            <div class="payment-method">
+              <h3 class="section-subtitle">Payment Method</h3>
+              <div class="payment-options">
+                <div class="payment-option active">
+                  <div class="payment-option-icon">
+                    <i class="far fa-credit-card"></i>
+                  </div>
+                  <div class="payment-option-info">
+                    <h4>Credit Card</h4>
+                    <p>**** 5678</p>
+                  </div>
+                  <div class="payment-option-check">
+                    <i class="fas fa-check"></i>
+                  </div>
+                </div>
+
+                <div class="payment-option">
+                  <div class="payment-option-icon">
+                    <i class="fab fa-paypal"></i>
+                  </div>
+                  <div class="payment-option-info">
+                    <h4>PayPal</h4>
+                    <p>user@example.com</p>
+                  </div>
+                  <div class="payment-option-check">
+                    <i class="fas fa-check"></i>
+                  </div>
+                </div>
+
+                <div class="payment-option add-payment">
+                  <div class="payment-option-icon">
+                    <i class="fas fa-plus"></i>
+                  </div>
+                  <div class="payment-option-info">
+                    <h4>Add Payment Method</h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Promo Code -->
+            <div class="promo-code">
+              <button class="promo-code-toggle" id="promo-code-toggle">
+                <i class="fas fa-tag"></i>
+                <span>Add promo code</span>
+              </button>
+              <div
+                class="promo-code-input-container"
+                id="promo-code-input-container"
+              >
+                <input
+                  type="text"
+                  class="promo-code-input"
+                  placeholder="Enter promo code"
+                />
+                <button class="promo-code-apply">Apply</button>
+              </div>
+            </div>
+
+            <!-- Fare Estimate -->
+            <div class="fare-estimate" id="fare-estimate">
+              <h3 class="section-subtitle">Fare Estimate</h3>
+              <div class="fare-breakdown">
+                <div class="fare-item">
+                  <span>Base fare (150km × ₹12/km)</span>
+                  <span id="base-fare">₹1,800</span>
+                </div>
+                <div class="fare-item">
+                  <span>Driver allowance</span>
+                  <span id="driver-allowance">₹500</span>
+                </div>
+                <div class="fare-item">
+                  <span>Toll & state taxes</span>
+                  <span id="tolls-taxes">₹350</span>
+                </div>
+                <div class="fare-item total">
+                  <span>Total</span>
+                  <span id="total-fare">₹2,650</span>
+                </div>
+              </div>
+              <p class="fare-note">
+                <i class="fas fa-info-circle"></i>
+                Fixed price guarantee - includes fuel, tolls, and driver allowance
+              </p>
+            </div>
+
+            <!-- Book Button -->
+            <div class="booking-actions">
+              <button
+                class="btn btn-primary btn-lg btn-block"
+                id="book-ride-btn"
+              >
+                Book Intercity Travel
+              </button>
+            </div>
+
+            <!-- Hidden inputs for form data -->
+            <input type="hidden" id="selected-vehicle-type" value="sedan" />
+            <input type="hidden" id="selected-fare" value="₹2,650" />
+            <input type="hidden" id="estimated-distance" value="150" />
+          </div>
+        </div>
+
+        <!-- Map Container -->
+        <div class="map-container">
+          <iframe
+            class="map-embed"
+            src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d966276.9221204806!2d72.41223120209055!3d19.08312348850952!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e0!4m5!1s0x3be7c6306644edc1%3A0x5da4ed8f8d648c69!2sMumbai%2C%20Maharashtra!3m2!1d19.0759837!2d72.8776559!4m5!1s0x3bc123e1d8cca2e3%3A0xc5af90753c10916e!2sPune%2C%20Maharashtra!3m2!1d18.520430299999997!2d73.8567437!5e0!3m2!1sen!2sin!4v1687162988754!5m2!1sen!2sin"
+            width="100%"
+            height="100%"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+
+          <!-- Route Info -->
+          <div class="route-info" id="route-info">
+            <div class="route-info-header">
+              <h3 class="route-info-title">Route Details</h3>
+              <button class="route-info-toggle" id="route-info-toggle">
+                <span>Details</span>
+                <i class="fas fa-chevron-down"></i>
+              </button>
+            </div>
+            <div class="route-info-content" id="route-info-content">
+              <div class="route-details">
+                <div class="route-detail">
+                  <div class="route-detail-value" id="route-distance">
+                    150 km
+                  </div>
+                  <div class="route-detail-label">Distance</div>
+                </div>
+                <div class="route-detail">
+                  <div class="route-detail-value" id="route-duration">
+                    3h 15m
+                  </div>
+                  <div class="route-detail-label">Duration</div>
+                </div>
+              </div>
+              <div class="route-points">
+                <div class="route-point">
+                  <i class="fas fa-circle route-point-icon start"></i>
+                  <div class="route-point-label">Mumbai, Maharashtra</div>
+                </div>
+                <div class="route-line"></div>
+                <div class="route-point">
+                  <i class="fas fa-map-marker-alt route-point-icon waypoint"></i>
+                  <div class="route-point-label">Lonavala</div>
+                </div>
+                <div class="route-line"></div>
+                <div class="route-point">
+                  <i class="fas fa-flag-checkered route-point-icon end"></i>
+                  <div class="route-point-label">Pune, Maharashtra</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Bottom Navigation for Mobile -->
+    <nav class="bottom-nav">
+      <ul class="bottom-nav-list">
+        <li class="bottom-nav-item">
+          <a href="index.html" class="bottom-nav-link">
+            <i class="fas fa-home bottom-nav-icon"></i>
+            <span>Home</span>
+          </a>
+        </li>
+        <li class="bottom-nav-item">
+          <a href="booking.html" class="bottom-nav-link">
+            <i class="fas fa-car bottom-nav-icon"></i>
+            <span>Ride</span>
+          </a>
+        </li>
+        <li class="bottom-nav-item">
+          <a href="dashboard.html" class="bottom-nav-link">
+            <i class="fas fa-tachometer-alt bottom-nav-icon"></i>
+            <span>Dashboard</span>
+          </a>
+        </li>
+        <li class="bottom-nav-item">
+          <a href="profile.html" class="bottom-nav-link">
+            <i class="fas fa-user bottom-nav-icon"></i>
+            <span>Profile</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Booking Confirmation Modal -->
+    <div class="modal" id="booking-confirmation-modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2>Intercity Travel Confirmed!</h2>
+          <button class="modal-close" id="modal-close">&times;</button>
+        </div>
+        <div class="modal-body">
+          <div class="confirmation-icon">
+            <i class="fas fa-check-circle"></i>
+          </div>
+          <p>Your intercity travel has been booked successfully.</p>
+          <div class="driver-info">
+            <div class="driver-photo">
+              <img src="../images/driver.jpg" alt="Driver Photo" />
+            </div>
+            <div class="driver-details">
+              <h3>Amit Patel</h3>
+              <div class="driver-rating">
+                <i class="fas fa-star"></i>
+                <span>4.9</span>
+              </div>
+              <div class="driver-car">
+                <span>Honda City</span>
+                <span class="driver-car-plate">MH 04 EF 9012</span>
+              </div>
+            </div>
+          </div>
+          <div class="driver-car-image" style="margin: 15px 0; text-align: center;">
+            <img src="../images/car1.jpg" alt="Driver's Car" style="max-width: 100%; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);" />
+          </div>
+          <div class="confirmation-details">
+            <div class="confirmation-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <div>
+                <h4>Origin</h4>
+                <p id="confirmation-pickup">Mumbai, Maharashtra</p>
+              </div>
+            </div>
+            <div class="confirmation-item">
+              <i class="fas fa-flag-checkered"></i>
+              <div>
+                <h4>Destination</h4>
+                <p id="confirmation-destination">Pune, Maharashtra</p>
+              </div>
+            </div>
+            <div class="confirmation-item">
+              <i class="fas fa-calendar-alt"></i>
+              <div>
+                <h4>Departure</h4>
+                <p id="confirmation-time">Jun 15, 2025 - 10:00 AM</p>
+              </div>
+            </div>
+            <div class="confirmation-item">
+              <i class="fas fa-money-bill-wave"></i>
+              <div>
+                <h4>Fare</h4>
+                <p id="confirmation-fare">₹2,650</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <a href="tracking.html" class="btn btn-primary btn-block">Track Your Ride</a>
+          <button class="btn btn-secondary btn-block" id="cancel-ride-btn">
+            Cancel Ride
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- JavaScript Files -->
+    <script src="../js/main.js"></script>
+    <script src="../js/booking.js"></script>
+    <script src="../js/settings.js"></script>
+    <script src="../js/dark-theme.js"></script>
+    <script src="../js/ride-types.js"></script>
+  </body>
+</html>

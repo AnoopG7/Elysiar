@@ -1,0 +1,530 @@
+/* Custom Styles for Ride Types */
+
+/* Common Badge Styles */
+.premium-ride-badge,
+.airport-badge,
+.intercity-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: linear-gradient(135deg, rgba(107, 70, 254, 0.2), rgba(59, 130, 246, 0.2));
+  border-radius: 50px;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--primary-purple);
+}
+
+.premium-ride-badge i,
+.airport-badge i,
+.intercity-badge i {
+  color: var(--primary-purple);
+}
+
+/* Descriptive text below title */
+.premium-description,
+.airport-description,
+.intercity-description {
+  margin-bottom: 2rem;
+  color: var(--text-secondary);
+  font-size: var(--font-size-md);
+  line-height: 1.6;
+}
+
+/* Premium Page Specific Styles */
+.premium-ride-page .booking-title {
+  color: var(--primary-purple);
+  margin-bottom: 1rem;
+}
+
+.premium-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+.premium-amenities {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.amenities-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.amenity-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: var(--radius-md);
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.amenity-item:hover {
+  transform: translateY(-4px);
+  background: rgba(107, 70, 254, 0.1);
+}
+
+.amenity-icon {
+  font-size: 1.5rem;
+  color: var(--primary-purple);
+  margin-bottom: 0.5rem;
+}
+
+.amenity-label {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+}
+
+/* Airport Transfer Specific Styles */
+.airport-transfer-page .booking-title {
+  color: var(--primary-blue);
+  margin-bottom: 1rem;
+}
+
+.airport-badge {
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.2), rgba(147, 197, 253, 0.2));
+  color: var(--primary-blue);
+}
+
+.airport-badge i {
+  color: var(--primary-blue);
+}
+
+.flight-information {
+  margin: 2rem 0;
+}
+
+.flight-info-inputs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.flight-input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  position: relative;
+}
+
+.flight-input-container label {
+  font-size: var(--font-size-sm);
+  color: var(--text-secondary);
+}
+
+.flight-input {
+  background: var(--card-bg);
+  border: 2px solid rgba(107, 70, 254, 0.2);
+  border-radius: var(--radius-md);
+  padding: 0.75rem 1rem;
+  color: var(--text-primary);
+  width: 100%;
+}
+
+/* Special styles for date and time inputs */
+input[type="date"].flight-input,
+input[type="time"].flight-input {
+  appearance: none;
+  -webkit-appearance: none;
+  min-height: 46px;
+  position: relative;
+  background-color: var(--card-bg);
+}
+
+input[type="date"].flight-input::-webkit-calendar-picker-indicator,
+input[type="time"].flight-input::-webkit-calendar-picker-indicator {
+  background: transparent;
+  color: var(--text-primary);
+  cursor: pointer;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+  opacity: 0;
+}
+
+/* For Firefox */
+input[type="date"].flight-input::-moz-calendar-picker-indicator,
+input[type="time"].flight-input::-moz-calendar-picker-indicator {
+  opacity: 0;
+}
+
+/* Style for inputs with values */
+input[type="date"].flight-input.has-value,
+input[type="time"].flight-input.has-value,
+input[type="date"].flight-input:valid,
+input[type="time"].flight-input:valid {
+  color: var(--text-primary);
+  border-color: rgba(107, 70, 254, 0.4);
+}
+
+/* Add calendar and clock icons */
+/* For date input container */
+.flight-input-container.date-container::after {
+  content: '\f073';
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  position: absolute;
+  right: 12px;
+  bottom: 13px;
+  color: var(--text-secondary);
+  pointer-events: none;
+}
+
+/* For time input container */
+.flight-input-container.time-container::after {
+  content: '\f017';
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  position: absolute;
+  right: 12px;
+  bottom: 13px;
+  color: var(--text-secondary);
+  pointer-events: none;
+}
+
+.flight-tracking-note,
+.fare-note,
+.journey-note {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  padding: 1rem;
+  border-radius: var(--radius-md);
+  background: rgba(59, 130, 246, 0.1);
+  color: var(--text-secondary);
+  font-size: var(--font-size-sm);
+}
+
+.flight-tracking-note i,
+.fare-note i,
+.journey-note i {
+  color: var(--primary-blue);
+}
+
+.trip-type-selection {
+  margin-bottom: 2rem;
+}
+
+.trip-type-options {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.trip-type-option {
+  flex: 1;
+  position: relative;
+  cursor: pointer;
+}
+
+.trip-type-option input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.trip-type-label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 2px solid var(--border-color);
+  border-radius: var(--radius-md);
+  transition: all 0.3s ease;
+  text-align: center;
+  width: 100%; /* Ensure full width */
+  overflow: hidden; /* Prevent any overflow */
+}
+
+.trip-type-option input[type="radio"]:checked + .trip-type-label {
+  background: rgba(107, 70, 254, 0.1);
+  border-color: var(--primary-purple);
+  color: var(--primary-purple);
+}
+
+.trip-type-label i {
+  font-size: 1.5rem;
+}
+
+/* Intercity Travel Specific Styles */
+.intercity-travel-page .booking-title {
+  color: var(--primary-blue);
+  margin-bottom: 1rem;
+}
+
+.intercity-badge {
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.2), rgba(5, 150, 105, 0.2));
+  color: #10B981;
+}
+
+.intercity-badge i {
+  color: #10B981;
+}
+
+.specific-addresses {
+  margin-bottom: 2rem;
+}
+
+.date-time-selection {
+  margin: 2rem 0;
+}
+
+.date-time-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.date-time-input {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.date-time-input label {
+  font-size: var(--font-size-sm);
+  color: var(--text-secondary);
+}
+
+.date-time-input input {
+  background: var(--card-bg);
+  border: 2px solid rgba(107, 70, 254, 0.2);
+  border-radius: var(--radius-md);
+  padding: 0.75rem 1rem;
+  color: var(--text-primary);
+}
+
+.return-date-container,
+.return-time-container {
+  opacity: 0.5;
+}
+
+.passenger-count {
+  margin: 2rem 0;
+}
+
+.passenger-select-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 1rem;
+  border-radius: var(--radius-md);
+}
+
+.passenger-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  background: var(--primary-purple);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.passenger-btn:hover {
+  transform: scale(1.1);
+}
+
+.passenger-btn.decrease {
+  background: rgba(239, 68, 68, 0.2);
+  color: #EF4444;
+}
+
+.passenger-btn.decrease:hover {
+  background: rgba(239, 68, 68, 0.3);
+}
+
+.passenger-btn.increase {
+  background: rgba(16, 185, 129, 0.2);
+  color: #10B981;
+}
+
+.passenger-btn.increase:hover {
+  background: rgba(16, 185, 129, 0.3);
+}
+
+.passenger-count-display {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.passenger-count-value {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.passenger-label {
+  font-size: var(--font-size-sm);
+  color: var(--text-secondary);
+}
+
+.services-options {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.service-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: var(--radius-md);
+  position: relative;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.service-checkbox:hover {
+  background: rgba(107, 70, 254, 0.1);
+}
+
+.service-checkbox input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  accent-color: var(--primary-purple);
+}
+
+.service-tooltip {
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--surface-color);
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-sm);
+  color: var(--text-secondary);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 10;
+  width: max-content;
+  max-width: 200px;
+}
+
+.service-tooltip::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 5px 5px 0;
+  border-style: solid;
+  border-color: var(--surface-color) transparent transparent;
+}
+
+.service-checkbox:hover .service-tooltip {
+  opacity: 1;
+  visibility: visible;
+  top: -50px;
+}
+
+.route-points {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+}
+
+.route-point {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.route-point-icon {
+  font-size: 0.75rem;
+}
+
+.route-point-icon.start {
+  color: #10B981;
+}
+
+.route-point-icon.waypoint {
+  color: var(--primary-blue);
+}
+
+.route-point-icon.end {
+  color: #EF4444;
+}
+
+.route-line {
+  width: 2px;
+  height: 30px;
+  background: var(--border-color);
+  margin-left: 0.35rem;
+}
+
+.route-point-label {
+  font-size: var(--font-size-sm);
+  color: var(--text-secondary);
+}
+
+/* Responsive Styles */
+@media (max-width: 767px) {
+  .amenities-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .flight-info-inputs {
+    grid-template-columns: 1fr;
+  }
+  
+  .date-time-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .trip-type-options {
+    flex-direction: column;
+  }
+  
+  .service-checkbox {
+    padding: 0.75rem;
+  }
+  
+  .service-checkbox .service-tooltip {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .amenities-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .flight-info-inputs {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
