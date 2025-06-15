@@ -84,6 +84,7 @@
   top: 50%;
   transform: translateY(-50%);
   color: var(--text-secondary);
+  z-index: 1;
 }
 
 .input-with-icon input {
@@ -482,6 +483,36 @@
   display: block;
 }
 
+/* Animation for form validation errors */
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  10%, 30%, 50%, 70%, 90% { transform: translateX(-5px); }
+  20%, 40%, 60%, 80% { transform: translateX(5px); }
+}
+
+.shake {
+  animation: shake 0.5s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+}
+
+/* Input error styling */
+.input-error {
+  border-color: var(--danger-color) !important;
+  box-shadow: 0 0 0 1px var(--danger-color-light) !important;
+}
+
+.form-error {
+  color: var(--danger-color);
+  font-size: 0.85em;
+  margin-top: 4px;
+  display: block;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
 /* Dark Theme Default Styles */
 .auth-page .main-content {
   background-color: var(--background-primary);
@@ -515,6 +546,60 @@
   border-color: rgba(255, 255, 255, 0.1);
 }
 
+/* Notifications */
+.notification {
+  position: fixed;
+  bottom: -100px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 12px 24px;
+  border-radius: 8px;
+  background: var(--surface-color);
+  color: var(--text-color);
+  box-shadow: var(--shadow-lg);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  z-index: 1000;
+  opacity: 0;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  max-width: 90%;
+  width: auto;
+}
+
+.notification.active {
+  bottom: 24px;
+  opacity: 1;
+}
+
+.notification i {
+  font-size: 1.2rem;
+}
+
+.notification.success {
+  background: var(--success-color-light);
+  color: var(--success-color-dark);
+  border-left: 4px solid var(--success-color);
+}
+
+.notification.error {
+  background: var(--danger-color-light);
+  color: var(--danger-color-dark);
+  border-left: 4px solid var(--danger-color);
+}
+
+.notification.warning {
+  background: var(--warning-color-light);
+  color: var(--warning-color-dark);
+  border-left: 4px solid var(--warning-color);
+}
+
+.notification.info {
+  background: var(--primary-color-light);
+  color: var(--primary-color-dark);
+  border-left: 4px solid var(--primary-color);
+}
+
 /* Responsive Adjustments */
 @media (max-width: 576px) {
   .auth-card {
@@ -530,4 +615,83 @@
     height: 50px;
     font-size: var(--text-heading-sm);
   }
+}
+
+/* Responsive adjustments for select dropdowns on mobile */
+@media (max-width: 480px) {
+  .input-with-icon select.custom-select {
+    font-size: var(--text-body-sm);
+    padding-left: calc(var(--space-lg) + var(--space-xs));
+  }
+  
+  .input-with-icon i {
+    font-size: 0.9rem;
+    left: var(--space-sm);
+  }
+  
+  .signup-form-step[data-step="4"] .form-group label {
+    font-size: var(--text-body-sm);
+  }
+}
+
+/* Custom select styling to fix icon overlapping */
+.input-with-icon select.custom-select {
+  width: 100%;
+  padding: var(--space-md) var(--space-md) var(--space-md) calc(var(--space-xl) + var(--space-xs));
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  font-size: var(--text-body-md);
+  transition: all var(--transition-standard);
+  background-color: var(--surface-color);
+  color: var(--text-primary);
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("data:image/svg+xml;utf8,<svg fill='gray' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right var(--space-md) top 50%;
+}
+
+.input-with-icon select.custom-select:focus {
+  outline: none;
+  border-color: var(--primary-blue);
+  box-shadow: 0 0 0 3px rgba(26, 115, 232, 0.25);
+}
+
+/* Fix for dark mode */
+.dark-mode .input-with-icon select.custom-select {
+  background-image: url("data:image/svg+xml;utf8,<svg fill='lightgray' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+}
+
+/* Prevent dropdown text from overlapping with the left icon by ensuring min-height */
+.input-with-icon select.custom-select {
+  min-height: 42px; /* Ensure consistent height */
+  text-indent: 8px; /* Add a bit more indent from the left icon */
+  font-weight: var(--font-weight-medium); /* Make text slightly bolder for better visibility */
+}
+
+/* Ensure dropdown options don't inherit the text-indent */
+select.custom-select option {
+  text-indent: 0;
+  padding: var(--space-xs) var(--space-sm);
+}
+
+/* Enhance spacing for signup form step 4 dropdowns */
+.signup-form-step[data-step="4"] .form-group {
+  margin-bottom: var(--space-lg);
+}
+
+/* Position the dropdown icon further to the right to avoid overlap with the left icon */
+.signup-form-step[data-step="4"] .input-with-icon select.custom-select {
+  padding-right: calc(var(--space-xl) + var(--space-xs));
+  background-position: right var(--space-sm) top 50%;
+}
+
+/* Special handling for currency dropdown with rupee icon */
+.signup-form-step[data-step="4"] .form-group:nth-child(2) .input-with-icon i {
+  font-size: 0.8rem; /* Slightly smaller rupee icon */
+}
+
+.signup-form-step[data-step="4"] .form-group:nth-child(2) .input-with-icon select.custom-select {
+  padding-left: calc(var(--space-lg) + var(--space-sm)); /* Slightly less padding for currency dropdown */
 }
