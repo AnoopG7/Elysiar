@@ -109,13 +109,13 @@ function initializePremiumRide() {
     
     switch(selectedVehicle) {
       case 'premium-sedan':
-        totalFare = 400;
-        break;
-      case 'luxury-suv':
-        totalFare = 550;
+        totalFare = 600;
         break;
       case 'executive':
-        totalFare = 650;
+        totalFare = 700;
+        break;
+      case 'luxury-suv':
+        totalFare = 800;
         break;
     }
     
@@ -206,9 +206,9 @@ function initializeAirportTransfer() {
   // Update fare based on vehicle and services
   function updateAirportFare() {
     const baseRates = {
-      'sedan': 450,
-      'suv': 650,
-      'luxury': 850
+      'sedan': 400,
+      'premium': 600,
+      'suv': 800
     };
     
     let selectedVehicle = document.querySelector('.vehicle-option.active').getAttribute('data-type');
@@ -313,10 +313,12 @@ function initializeIntercityTravel() {
   // Update fare based on distance, vehicle, and passengers
   function updateIntercityFare() {
     const ratePerKm = {
-      'sedan': 12,
-      'suv': 15,
-      'premium': 18,
-      'tempo-traveller': 25
+      'bike': 6,
+      'bus': 7,
+      'green': 8,
+      'economy': 9,
+      'premium': 15,
+      'suv': 20
     };
     
     // Get estimated distance in km

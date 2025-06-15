@@ -410,17 +410,27 @@ function updateFareEstimate(distanceInMeters) {
 
 // Update fares for different vehicle types
 function updateVehicleTypeFares(baseFare) {
-  const economyFare = baseFare;
-  const premiumFare = Math.round(baseFare * 1.5);
-  const suvFare = Math.round(baseFare * 2);
-  const greenFare = Math.round(baseFare * 1.2);
-  const bikeFare = Math.round(baseFare * 0.6);
+  // Following the price hierarchy: bike < bus < green < economy < sedan < premium < SUV
+  const bikeFare = Math.round(baseFare * 0.6);  // Lowest fare
+  const busFare = Math.round(baseFare * 0.7);   // Slightly higher than bike
+  const greenFare = Math.round(baseFare * 0.8);  // Higher than bus
+  const economyFare = Math.round(baseFare * 0.9); // Higher than green
+  const sedanFare = baseFare;                    // Base fare (sedan is our reference)
+  const premiumFare = Math.round(baseFare * 1.5); // Higher than sedan
+  const suvFare = Math.round(baseFare * 2);      // Highest fare
   
+  // Update the price displays
+  document.getElementById('bike-fare').textContent = `₹${bikeFare}`;
+  if (document.getElementById('bus-fare')) {
+    document.getElementById('bus-fare').textContent = `₹${busFare}`;
+  }
+  document.getElementById('green-fare').textContent = `₹${greenFare}`;
   document.getElementById('economy-fare').textContent = `₹${economyFare}`;
+  if (document.getElementById('sedan-fare')) {
+    document.getElementById('sedan-fare').textContent = `₹${sedanFare}`;
+  }
   document.getElementById('premium-fare').textContent = `₹${premiumFare}`;
   document.getElementById('suv-fare').textContent = `₹${suvFare}`;
-  document.getElementById('green-fare').textContent = `₹${greenFare}`;
-  document.getElementById('bike-fare').textContent = `₹${bikeFare}`;
   
   // Update selected fare if economy is selected (default)
   const selectedVehicleType = document.getElementById('selected-vehicle-type').value;

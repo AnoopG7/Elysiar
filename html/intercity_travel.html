@@ -173,28 +173,31 @@
             <div class="vehicle-selection">
               <h3 class="section-subtitle">Select Vehicle</h3>
               <div class="vehicle-options">
-                <div class="vehicle-option active" data-type="sedan">
+
+                <div class="vehicle-option" data-type="bus">
                   <div class="vehicle-option-icon">
-                    <img src="../images/car1.jpg" alt="Sedan" />
+                    <img src="../images/bus.jpg" alt="Bus" />
                   </div>
                   <div class="vehicle-option-info">
-                    <h4>Sedan</h4>
-                    <p>Up to 4 people, 2 suitcases</p>
-                    <div class="vehicle-option-price" id="sedan-fare">
-                      ₹12/km
+                    <h4>Bus</h4>
+                    <p>Up to 20 people, shared ride</p>
+                    <div class="vehicle-option-price" id="bus-fare">
+                      ₹7/km
                     </div>
                   </div>
                 </div>
 
-                <div class="vehicle-option" data-type="suv">
+  
+
+                <div class="vehicle-option active" data-type="economy">
                   <div class="vehicle-option-icon">
-                    <img src="../images/car3.jpg" alt="SUV" />
+                    <img src="../images/car5.jpg" alt="Economy" />
                   </div>
                   <div class="vehicle-option-info">
-                    <h4>SUV</h4>
-                    <p>Up to 6 people, 4 suitcases</p>
-                    <div class="vehicle-option-price" id="suv-fare">
-                      ₹15/km
+                    <h4>Economy</h4>
+                    <p>Up to 4 people, budget-friendly</p>
+                    <div class="vehicle-option-price" id="economy-fare">
+                      ₹20/km
                     </div>
                   </div>
                 </div>
@@ -206,18 +209,20 @@
                   <div class="vehicle-option-info">
                     <h4>Premium</h4>
                     <p>Luxury travel for up to 4 people</p>
-                    <div class="vehicle-option-price" id="premium-fare">₹18/km</div>
+                    <div class="vehicle-option-price" id="premium-fare">₹25/km</div>
                   </div>
                 </div>
 
-                <div class="vehicle-option" data-type="tempo-traveller">
+                <div class="vehicle-option" data-type="suv">
                   <div class="vehicle-option-icon">
-                    <img src="../images/bus.jpg" alt="Tempo Traveller" />
+                    <img src="../images/car3.jpg" alt="SUV" />
                   </div>
                   <div class="vehicle-option-info">
-                    <h4>Tempo Traveller</h4>
-                    <p>Up to 12 people, group travel</p>
-                    <div class="vehicle-option-price" id="tempo-fare">₹25/km</div>
+                    <h4>SUV</h4>
+                    <p>Up to 6 people, 4 suitcases</p>
+                    <div class="vehicle-option-price" id="suv-fare">
+                      ₹30/km
+                    </div>
                   </div>
                 </div>
               </div>
@@ -347,8 +352,8 @@
               <h3 class="section-subtitle">Fare Estimate</h3>
               <div class="fare-breakdown">
                 <div class="fare-item">
-                  <span>Base fare (150km × ₹12/km)</span>
-                  <span id="base-fare">₹1,800</span>
+                  <span>Base fare (150km × ₹9/km)</span>
+                  <span id="base-fare">₹1,350</span>
                 </div>
                 <div class="fare-item">
                   <span>Driver allowance</span>
@@ -356,11 +361,11 @@
                 </div>
                 <div class="fare-item">
                   <span>Toll & state taxes</span>
-                  <span id="tolls-taxes">₹350</span>
+                  <span id="tolls-taxes">₹180</span>
                 </div>
                 <div class="fare-item total">
                   <span>Total</span>
-                  <span id="total-fare">₹2,650</span>
+                  <span id="total-fare">₹2,030</span>
                 </div>
               </div>
               <p class="fare-note">
@@ -497,13 +502,13 @@
                 <span>4.9</span>
               </div>
               <div class="driver-car">
-                <span>Honda City</span>
+                <span>Hyundai i10</span>
                 <span class="driver-car-plate">MH 04 EF 9012</span>
               </div>
             </div>
           </div>
           <div class="driver-car-image" style="margin: 15px 0; text-align: center;">
-            <img src="../images/car1.jpg" alt="Driver's Car" style="max-width: 100%; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);" />
+            <img src="../images/car5.jpg" alt="Driver's Car" style="max-width: 100%; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);" />
           </div>
           <div class="confirmation-details">
             <div class="confirmation-item">
@@ -531,7 +536,7 @@
               <i class="fas fa-money-bill-wave"></i>
               <div>
                 <h4>Fare</h4>
-                <p id="confirmation-fare">₹2,650</p>
+                <p id="confirmation-fare">₹2,030</p>
               </div>
             </div>
           </div>
