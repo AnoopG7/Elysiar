@@ -40,8 +40,17 @@
 
 .premium-options {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 1rem;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-lg);
+  width: 100%;
+  margin: var(--space-md) 0;
+  align-items: stretch;
+}
+
+@media (max-width: 575.98px) {
+  .premium-options {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 
 .premium-amenities {
